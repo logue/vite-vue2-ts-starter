@@ -19,6 +19,7 @@ plugins:
   - '@typescript-eslint'
   - vuejs-accessibility
 rules: {
+  require-jsdoc: off,
   valid-jsdoc: off,
   new-cap: off,
   vue/html-self-closing: [error,
