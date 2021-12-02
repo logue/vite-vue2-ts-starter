@@ -4,7 +4,7 @@ import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
-const routes: Array<RouteConfig> = [
+const routes: RouteConfig[] = [
   {
     path: '/',
     name: 'Home',
@@ -21,9 +21,7 @@ const routes: Array<RouteConfig> = [
   },
 ];
 
-const router = new VueRouter({
+export default new VueRouter({
   mode: 'history',
   routes,
 });
-
-export default router;
