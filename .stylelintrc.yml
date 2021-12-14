@@ -8,3 +8,7 @@ plugins:
   - stylelint-prettier
 rules:
   prettier/prettier: true
+  color-function-notation: legacy
+  selector-class-pattern: null
+  no-descending-specificity: null
+  at-rule-no-unknown: null

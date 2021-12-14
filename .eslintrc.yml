@@ -18,13 +18,8 @@ parserOptions:
 plugins:
   - '@typescript-eslint'
   - vuejs-accessibility
-rules: {
-  require-jsdoc: off,
-  valid-jsdoc: off,
-  new-cap: off,
-  vue/html-self-closing: [error,
-    html: {
-      void: always
-    }
-  ]
-}
+rules:
+  require-jsdoc: warn
+  valid-jsdoc: warn
+  new-cap: off
+  vue/html-self-closing: [error, html: { void: always }]
