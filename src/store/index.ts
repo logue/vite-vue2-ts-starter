@@ -51,7 +51,7 @@ const actions: ActionTree<RootState, RootState> = {
 
 // VuexStore
 const store: StoreOptions<RootState> = {
-  strict: true,
+  strict: import.meta.env.PROD,
   state,
   getters,
   mutations,

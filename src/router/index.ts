@@ -22,6 +22,7 @@ const routes: RouteConfig[] = [
 ];
 
 export default new VueRouter({
+  base: import.meta.env.BASE_URL,
   mode: 'history',
   routes,
 });
