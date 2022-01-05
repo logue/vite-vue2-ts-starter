@@ -32,7 +32,9 @@ export default defineConfig({
   },
   plugins: [
     // Vue2
-    createVuePlugin(),
+    createVuePlugin({
+      target: 'esnext',
+    }),
     // eslint
     eslintPlugin(),
     // Stylelint
