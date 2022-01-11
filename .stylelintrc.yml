@@ -6,6 +6,8 @@ extends:
 plugins:
   - stylelint-order
   - stylelint-prettier
+ignoreFiles:
+  - 'dist/**/*'
 rules:
   prettier/prettier: true
   at-rule-no-unknown: null

@@ -18,21 +18,21 @@ export interface RootState {
   */
 }
 
-// State
+/** State */
 const state: RootState = {
   /*
   exampleData: null,
   */
 };
 
-// Getters
+/** Getters */
 const getters: GetterTree<RootState, RootState> = {
   /*
   exampleGetter: s => s.exampleData,
   */
 };
 
-// Mutation
+/** Mutation */
 const mutations: MutationTree<RootState> = {
   /*
   exampleMutation(s, payload) {
@@ -41,8 +41,13 @@ const mutations: MutationTree<RootState> = {
   */
 };
 
-// Action
+/** Action */
 const actions: ActionTree<RootState, RootState> = {
+  /**
+   * Example Action
+   * @param context Vuex Context
+   * @param data payload data
+   */
   exampleAction(context: ActionContext<RootState, RootState>, data: any) {
     // ...
     context.commit('exampleMutation', data);

@@ -22,4 +22,4 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 
 ## Troubleshooting
 
-When rewriting the import statement, the cache on the vite side may remain old and the changes may not be reflected. In that case, delete the files in `node_modules/.vite`.
+When rewriting the import statement, the cache on the vite side may remain old and the changes may not be reflected. In that case, delete the files in `node_modules/.vite` or type `yarn clean`.
