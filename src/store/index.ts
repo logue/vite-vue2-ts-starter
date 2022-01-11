@@ -62,14 +62,28 @@ const store: StoreOptions<RootState> = {
   getters,
   mutations,
   actions,
-  modules: {},
+  modules: {
+    // SomeModule,
+  },
   plugins: [
     /*
+    // store as local storage using vuex-persist
     new VuexPersistence({
-      key: 'someNamespace',
-      storage: window.sessionStorage,
-      modules: [Target module],
+      key: import.meta.env.VITE_APP_WEBSTORAGE_NAMESPACE,
+      storage: window.localStorage,
+      modules: ['SomeModule'],
     }).plugin,
+    // store as session storage
+    new VuexPersistence({
+      key: import.meta.env.VITE_APP_WEBSTORAGE_NAMESPACE,
+      storage: window.sessionStorage,
+      modules: ['SomeModule'],
+    }).plugin,
+    // store as Indexed DB (using vuex-persist-indexeddb)
+    createPersistedState({
+      key: import.meta.env.VITE_APP_WEBSTORAGE_NAMESPACE,
+      paths: ['SomeLargeModule'],
+    }),
     */
   ],
 };
