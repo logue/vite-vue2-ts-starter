@@ -56,7 +56,8 @@ const actions: ActionTree<RootState, RootState> = {
 
 // VuexStore
 const store: StoreOptions<RootState> = {
-  strict: import.meta.env.PROD,
+  // https://next.vuex.vuejs.org/guide/strict.html#development-vs-production
+  strict: import.meta.env.DEV,
   state,
   getters,
   mutations,
