@@ -1,4 +1,4 @@
-// Vuex Store
+/** Vuex Store */
 import Vue from 'vue';
 import Vuex, {
   ActionContext,
@@ -45,8 +45,9 @@ const mutations: MutationTree<RootState> = {
 const actions: ActionTree<RootState, RootState> = {
   /**
    * Example Action
-   * @param context Vuex Context
-   * @param data payload data
+   *
+   * @param context - Vuex Context
+   * @param data - Payload data
    */
   exampleAction(context: ActionContext<RootState, RootState>, data: any) {
     // ...
