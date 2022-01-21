@@ -9,5 +9,3 @@ bracketSameLine: false
 arrowParens: avoid
 htmlWhitespaceSensitivity: ignore
 endOfLine: lf
-plugins:
-  - prettier-plugin-jsdoc
