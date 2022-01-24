@@ -23,6 +23,8 @@ parserOptions:
   ecmaVersion: latest
   parser: '@typescript-eslint/parser'
   sourceType: module
+  createDefaultProgram: true
+  project: ./tsconfig.json
 rules:
   new-cap: off
   no-invalid-this: off
