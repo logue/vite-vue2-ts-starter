@@ -2,6 +2,13 @@
   <div class="hello">
     <h1 v-text="msg" />
     <p>
+      Build:
+      <time
+        :datetime="meta.date"
+        v-text="new Date(meta.date).toLocaleString()"
+      />
+    </p>
+    <p>
       For a guide and recipes on how to configure / customize this project,
       <br />
       check out the
@@ -118,11 +125,16 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
+import MetaInterface from '@/interfaces/MetaInterface';
+import Meta from '@/Meta';
+
 @Component
 /** HelloWorld Component */
 export default class HelloWorld extends Vue {
   /** Prop message */
   @Prop() msg!: string;
+  /** Meta information */
+  meta: MetaInterface = Meta;
 }
 </script>
 
