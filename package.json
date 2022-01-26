@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/package.json",
   "name": "vite-vue2-ts-starter",
   "private": true,
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Vue2 TypeScript Startar project for Vite.",
   "author": {
     "name": "Logue",
