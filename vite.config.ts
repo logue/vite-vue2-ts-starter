@@ -2,6 +2,7 @@ import { defineConfig, type UserConfig } from 'vite';
 import { createVuePlugin } from 'vite-plugin-vue2';
 import eslintPlugin from 'vite-plugin-eslint';
 import viteStylelint from '@amatlash/vite-plugin-stylelint';
+import fs from 'fs';
 import path from 'path';
 
 // https://vitejs.dev/config/
@@ -86,9 +87,6 @@ const config: UserConfig = {
 
 // Export vite config
 export default defineConfig(async ({ command }): Promise<UserConfig> => {
-  /** ファイルシステム */
-  const fs = require('fs');
-
   // Hook production build.
   if (command === 'build') {
     // Write meta data.
