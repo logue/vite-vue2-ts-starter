@@ -19,7 +19,7 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class App extends Vue {
   /** Before create */
   beforeCreate() {
-    document.title = import.meta.env.VITE_APP_TITLE;
+    document.title = import.meta.env.VITE_APP_TITLE || 'Vue APP';
   }
 }
 </script>

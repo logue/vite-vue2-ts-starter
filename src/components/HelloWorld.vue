@@ -131,10 +131,12 @@ import Meta from '@/Meta';
 @Component
 /** HelloWorld Component */
 export default class HelloWorld extends Vue {
-  /** Prop message */
-  @Prop() msg!: string;
   /** Meta information */
   meta: MetaInterface = Meta;
+
+  /** Prop message */
+  @Prop()
+  readonly msg!: string;
 }
 </script>
 
