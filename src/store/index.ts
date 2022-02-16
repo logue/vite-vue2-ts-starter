@@ -1,6 +1,4 @@
 /** Vuex Store */
-import Vue from 'vue';
-import Vuex from 'vuex';
 import type {
   ActionContext,
   ActionTree,
@@ -8,6 +6,8 @@ import type {
   MutationTree,
   StoreOptions,
 } from 'vuex';
+import Vuex, { Store } from 'vuex';
+import Vue from 'vue';
 
 Vue.use(Vuex);
 
@@ -90,4 +90,4 @@ const store: StoreOptions<RootState> = {
   ],
 };
 
-export default new Vuex.Store<RootState>(store);
+export default new Store<RootState>(store);

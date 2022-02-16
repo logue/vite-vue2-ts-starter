@@ -44,7 +44,7 @@
       </li>
       <li>
         <a
-          href="https://github.com/AMatlash/vite-plugin-stylelint"
+          href="https://github.com/ModyQyW/vite-plugin-stylelint"
           target="_blank"
           rel="noopener"
         >
@@ -125,14 +125,14 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
-import MetaInterface from '@/interfaces/MetaInterface';
+import type MetaInterface from '@/interfaces/MetaInterface';
 import Meta from '@/Meta';
 
 @Component
 /** HelloWorld Component */
 export default class HelloWorld extends Vue {
   /** Meta information */
-  meta: MetaInterface = Meta;
+  readonly meta: MetaInterface = Meta;
 
   /** Prop message */
   @Prop()

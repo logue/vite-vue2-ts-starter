@@ -1,7 +1,7 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
 import type { RouteConfig } from 'vue-router';
 import Home from '@/views/Home.vue';
+import VueRouter from 'vue-router';
+import Vue from 'vue';
 
 Vue.use(VueRouter);
 
@@ -24,6 +24,6 @@ const routes: RouteConfig[] = [
 
 export default new VueRouter({
   base: import.meta.env.BASE_URL,
-  mode: 'history',
+  mode: 'history', // abstract, hash, history
   routes,
 });
