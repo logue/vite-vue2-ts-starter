@@ -1,6 +1,7 @@
 /** Vuex Store */
 import Vue from 'vue';
-import Vuex, {
+import Vuex from 'vuex';
+import type {
   ActionContext,
   ActionTree,
   GetterTree,
