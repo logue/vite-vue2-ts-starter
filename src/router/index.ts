@@ -1,7 +1,7 @@
-import type { RouteConfig } from 'vue-router';
-import Home from '@/views/Home.vue';
-import VueRouter from 'vue-router';
+import VueRouter, { type RouteConfig } from 'vue-router';
 import Vue from 'vue';
+
+import Home from '@/views/Home.vue';
 
 Vue.use(VueRouter);
 
