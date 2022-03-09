@@ -1,9 +1,8 @@
 # Vite + Vue 2 + TypeScript
 
-> Attach this to the Vue project. I developed it with reference to Vite's build tool.
-> This is different from the previous one, and the output is several times different. Amazing, Vue's performance jumps several times!!! Take it, and install it right away and try it out.
-
--- Tem Ray
+<p align="center">
+<img src="https://user-images.githubusercontent.com/480173/157433672-3d896453-9689-45e2-bbef-d91b29d72c4b.png" alt="logo" width="300" height="300" />
+</p>
 
 ## Description
 
