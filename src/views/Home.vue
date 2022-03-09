@@ -1,6 +1,11 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" :src="require('@/assets/logo.png')" />
+    <img
+      alt="Vue logo"
+      :src="require('@/assets/logo.svg')"
+      height="200"
+      Width="200"
+    />
     <hello-world msg="Welcome to Your Vue.js + TypeScript App" />
   </div>
 </template>
