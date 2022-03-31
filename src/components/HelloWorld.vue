@@ -24,18 +24,18 @@
     <h3>Installed Vite Plugins</h3>
     <ul>
       <li>
-        <a href="https://router.vuejs.org/" target="_blank" rel="noopener">
+        <a href="https://v3.router.vuejs.org/" target="_blank" rel="noopener">
           router
         </a>
       </li>
       <li>
-        <a href="https://vuex.vuejs.org/" target="_blank" rel="noopener">
+        <a href="https://v3.vuex.vuejs.org/" target="_blank" rel="noopener">
           vuex
         </a>
       </li>
       <li>
         <a
-          href="https://github.com/gxmari007/vite-plugin-eslint"
+          href="https://github.com/ModyQyW/vite-plugin-eslint"
           target="_blank"
           rel="noopener"
         >
@@ -88,25 +88,36 @@
     <h3>Ecosystem</h3>
     <ul>
       <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener">
+        <a href="https://v3.router.vuejs.org" target="_blank" rel="noopener">
           vue-router
         </a>
       </li>
       <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
+        <a href="https://v3.vuex.vuejs.org" target="_blank" rel="noopener">
+          vuex
+        </a>
       </li>
       <li>
-        <a
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-        >
+        <a href="https://devtools.vuejs.org/" target="_blank" rel="noopener">
           vue-devtools
         </a>
       </li>
       <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">
-          vue-loader
+        <a
+          href="https://class-component.vuejs.org/"
+          target="_blank"
+          rel="noopener"
+        >
+          vue-class-component
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/kaorun343/vue-property-decorator"
+          target="_blank"
+          rel="noopener"
+        >
+          vue-property-decorator
         </a>
       </li>
       <li>

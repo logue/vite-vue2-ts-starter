@@ -1,7 +1,7 @@
+import eslintPlugin from '@modyqyw/vite-plugin-eslint';
 import { defineConfig, type UserConfig } from 'vite';
 import stylelintPlugin from 'vite-plugin-stylelint';
 import { createVuePlugin } from 'vite-plugin-vue2';
-import eslintPlugin from 'vite-plugin-eslint';
 import path from 'path';
 import fs from 'fs';
 
@@ -38,9 +38,9 @@ const config: UserConfig = {
       target: 'esnext',
     }),
     // eslint
-    // https://github.com/gxmari007/vite-plugin-eslint
+    // https://github.com/ModyQyW/vite-plugin-eslint
     eslintPlugin({
-      fix: true,
+      // fix: true,
       // include: '**/*.{js,jsx,ts,tsx,vue,json,yml,yaml,htm,html}',
     }),
     // Stylelint
