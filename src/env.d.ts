@@ -3,7 +3,8 @@
 
 declare module '*.vue' {
   import Vue from 'vue';
-  export default Vue;
+  const component: ReturnType<typeof defineComponent>;
+  export default component;
 }
 
 interface ImportMetaEnv {

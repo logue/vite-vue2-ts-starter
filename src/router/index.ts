@@ -1,10 +1,12 @@
-import VueRouter, { type RouteConfig } from 'vue-router';
+import VueRouter, { type Route, type RouteConfig } from 'vue-router';
+import { getCurrentInstance } from '@vue/composition-api';
 import Vue from 'vue';
 
 import Home from '@/views/Home.vue';
 
 Vue.use(VueRouter);
 
+/** Router Configure */
 const routes: RouteConfig[] = [
   {
     path: '/',
@@ -27,3 +29,21 @@ export default new VueRouter({
   mode: 'history', // abstract, hash, history
   routes,
 });
+
+/** Get router instance (For Composition api) */
+export function useRouter(): VueRouter {
+  /** Get Instance */
+  if (!instance) {
+    throw new Error(`Should be used in setup().`);
+  }
+  return instance.proxy.$router;
+}
+
+/** Get route instance (For Composition api) */
+export function useRoute(): Route {
+  /** Get Instance */
+  if (!instance) {
+    throw new Error(`Should be used in setup().`);
+  }
+  return instance.proxy.$route;
+}

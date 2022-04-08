@@ -60,6 +60,15 @@
           typescript
         </a>
       </li>
+      <li>
+        <a
+          href="https://github.com/vuejs/composition-api"
+          target="_blank"
+          rel="noopener"
+        >
+          @vue/composition-api
+        </a>
+      </li>
     </ul>
     <h3>Essential Links</h3>
     <ul>
