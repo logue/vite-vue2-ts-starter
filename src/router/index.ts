@@ -33,6 +33,7 @@ export default new VueRouter({
 /** Get router instance (For Composition api) */
 export function useRouter(): VueRouter {
   /** Get Instance */
+  const instance = getCurrentInstance();
   if (!instance) {
     throw new Error(`Should be used in setup().`);
   }
@@ -42,6 +43,7 @@ export function useRouter(): VueRouter {
 /** Get route instance (For Composition api) */
 export function useRoute(): Route {
   /** Get Instance */
+  const instance = getCurrentInstance();
   if (!instance) {
     throw new Error(`Should be used in setup().`);
   }
