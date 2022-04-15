@@ -1,7 +1,7 @@
+import { createVuePlugin as vue } from 'vite-plugin-vue2';
 import eslintPlugin from '@modyqyw/vite-plugin-eslint';
 import { defineConfig, type UserConfig } from 'vite';
 import stylelintPlugin from 'vite-plugin-stylelint';
-import { createVuePlugin } from 'vite-plugin-vue2';
 import path from 'path';
 import fs from 'fs';
 
@@ -34,20 +34,15 @@ const config: UserConfig = {
   plugins: [
     // Vue2
     // https://github.com/underfin/vite-plugin-vue2
-    createVuePlugin({
+    vue({
       target: 'esnext',
     }),
     // eslint
     // https://github.com/ModyQyW/vite-plugin-eslint
-    eslintPlugin({
-      // fix: true,
-      // include: '**/*.{js,jsx,ts,tsx,vue,json,yml,yaml,htm,html}',
-    }),
+    eslintPlugin(),
     // Stylelint
-    // https://github.com/gxmari007/vite-plugin-eslint
-    stylelintPlugin({
-      fix: true,
-    }),
+    // https://github.com/ModyQyW/vite-plugin-stylelint
+    stylelintPlugin(),
     // compress assets
     // https://github.com/vbenjs/vite-plugin-compression
     // viteCompression(),
