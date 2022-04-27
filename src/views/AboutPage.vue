@@ -9,5 +9,5 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 /** About Component */
-export default class About extends Vue {}
+export default class AboutPage extends Vue {}
 </script>

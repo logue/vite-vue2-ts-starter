@@ -17,7 +17,7 @@ import HelloWorld from '@/components/HelloWorld.vue';
 
 @Component({ components: { HelloWorld } })
 /** Home Component */
-export default class Home extends Vue {
+export default class HomePage extends Vue {
   /*
   // Props
   @Prop()
