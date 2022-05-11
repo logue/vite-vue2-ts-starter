@@ -1,7 +1,6 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "npm-scripts.showStartNotification": false,
-  "[ignore]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
+  "volar.tsPlugin": true,
+  "volar.icon.preview": true,
+  "volar.icon.finder": true
 }

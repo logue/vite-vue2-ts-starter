@@ -1,5 +1,4 @@
-import VueRouter, { type Route, type RouteConfig } from 'vue-router';
-import { getCurrentInstance } from '@vue/composition-api';
+import VueRouter, { type RouteConfig } from 'vue-router';
 import Vue from 'vue';
 
 import HomePage from '@/views/HomePage.vue';
@@ -29,23 +28,3 @@ export default new VueRouter({
   mode: 'history', // abstract, hash, history
   routes,
 });
-
-/** Get router instance (For Composition api) */
-export function useRouter(): VueRouter {
-  /** Get Instance */
-  const instance = getCurrentInstance();
-  if (!instance) {
-    throw new Error(`Should be used in setup().`);
-  }
-  return instance.proxy.$router;
-}
-
-/** Get route instance (For Composition api) */
-export function useRoute(): Route {
-  /** Get Instance */
-  const instance = getCurrentInstance();
-  if (!instance) {
-    throw new Error(`Should be used in setup().`);
-  }
-  return instance.proxy.$route;
-}

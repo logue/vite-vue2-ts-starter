@@ -1,72 +1,96 @@
-import { createVuePlugin as vue } from 'vite-plugin-vue2';
+import { createVuePlugin as Vue } from 'vite-plugin-vue2';
 import eslintPlugin from '@modyqyw/vite-plugin-eslint';
+import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig, type UserConfig } from 'vite';
 import stylelintPlugin from 'vite-plugin-stylelint';
 import path from 'path';
 import fs from 'fs';
 
 // https://vitejs.dev/config/
-const config: UserConfig = {
-  // https://vitejs.dev/config/#base
-  base: '/',
-  // Resolver
-  resolve: {
-    // https://vitejs.dev/config/#resolve-alias
-    alias: [
-      {
-        // vue @ shortcut fix
-        find: '@/',
-        replacement: `${path.resolve(__dirname, './src')}/`,
+export default defineConfig(async ({ mode }): Promise<UserConfig> => {
+  const config: UserConfig = {
+    // https://vitejs.dev/config/#base
+    base: '/',
+    // Resolver
+    resolve: {
+      // https://vitejs.dev/config/#resolve-alias
+      alias: [
+        {
+          // vue @ shortcut fix
+          find: '@/',
+          replacement: `${path.resolve(__dirname, './src')}/`,
+        },
+        {
+          find: 'src/',
+          replacement: `${path.resolve(__dirname, './src')}/`,
+        },
+      ],
+    },
+    // https://vitejs.dev/config/#server-options
+    server: {
+      fs: {
+        // Allow serving files from one level up to the project root
+        allow: ['..'],
       },
-      {
-        find: 'src/',
-        replacement: `${path.resolve(__dirname, './src')}/`,
-      },
+    },
+    plugins: [
+      // Vue2
+      // https://github.com/underfin/vite-plugin-vue2
+      Vue({
+        target: 'esnext',
+      }),
+      // eslint
+      // https://github.com/ModyQyW/vite-plugin-eslint
+      eslintPlugin(),
+      // Stylelint
+      // https://github.com/ModyQyW/vite-plugin-stylelint
+      stylelintPlugin(),
+      // compress assets
+      // https://github.com/vbenjs/vite-plugin-compression
+      // viteCompression(),
     ],
-  },
-  // https://vitejs.dev/config/#server-options
-  server: {
-    fs: {
-      // Allow serving files from one level up to the project root
-      allow: ['..'],
-    },
-  },
-  plugins: [
-    // Vue2
-    // https://github.com/underfin/vite-plugin-vue2
-    vue({
-      target: 'esnext',
-    }),
-    // eslint
-    // https://github.com/ModyQyW/vite-plugin-eslint
-    eslintPlugin(),
-    // Stylelint
-    // https://github.com/ModyQyW/vite-plugin-stylelint
-    stylelintPlugin(),
-    // compress assets
-    // https://github.com/vbenjs/vite-plugin-compression
-    // viteCompression(),
-  ],
-  // Build Options
-  // https://vitejs.dev/config/#build-options
-  build: {
-    rollupOptions: {
-      output: {
-        plugins: [
-          /*
-          // if you use Code encryption by rollup-plugin-obfuscator
-          // https://github.com/getkey/rollup-plugin-obfuscator
-          obfuscator({
-            globalOptions: {
-              debugProtection: true,
-            },
-          }),
-          */
-        ],
+    // Build Options
+    // https://vitejs.dev/config/#build-options
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            // Split external library from transpiled code.
+            vue: [
+              'vue',
+              '@vue/composition-api',
+              'vue-class-component',
+              'vue-property-decorator',
+              'vue-router',
+              'vuex',
+              'vue2-helpers',
+            ],
+          },
+          plugins: [
+            mode === 'analyze'
+              ? // rollup-plugin-visualizer
+                // https://github.com/btd/rollup-plugin-visualizer
+                visualizer({
+                  open: true,
+                  filename: 'dist/stats.html',
+                  gzipSize: true,
+                  brotliSize: true,
+                })
+              : undefined,
+            /*
+            // if you use Code encryption by rollup-plugin-obfuscator
+            // https://github.com/getkey/rollup-plugin-obfuscator
+            obfuscator({
+              globalOptions: {
+                debugProtection: true,
+              },
+            }),
+            */
+          ],
+        },
       },
-    },
-    target: 'es2021',
-    /*
+      target: 'es2021',
+      /*
     // Minify option
     // https://vitejs.dev/config/#build-minify
     minify: 'terser',
@@ -79,14 +103,9 @@ const config: UserConfig = {
       output: { comments: true, beautify: false },
     },
     */
-  },
-};
-
-// Export vite config
-export default defineConfig(async ({ command }): Promise<UserConfig> => {
-  // Hook production build.
-  // if (command === 'build') {
-  // Write meta data.
+    },
+  };
+  // Output build dates to Meta.ts
   fs.writeFileSync(
     path.resolve(path.join(__dirname, 'src/Meta.ts')),
     `import type MetaInterface from '@/interfaces/MetaInterface';
@@ -99,7 +118,5 @@ const meta: MetaInterface = {
 export default meta;
 `
   );
-  // }
-
   return config;
 });
