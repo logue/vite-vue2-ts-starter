@@ -3,6 +3,7 @@ import eslintPlugin from '@modyqyw/vite-plugin-eslint';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig, type UserConfig } from 'vite';
 import stylelintPlugin from 'vite-plugin-stylelint';
+import checker from 'vite-plugin-checker';
 import path from 'path';
 import fs from 'fs';
 
@@ -45,6 +46,9 @@ export default defineConfig(async ({ mode }): Promise<UserConfig> => {
       // Stylelint
       // https://github.com/ModyQyW/vite-plugin-stylelint
       stylelintPlugin(),
+      // vite-plugin-checker
+      // https://github.com/fi3ework/vite-plugin-checker
+      checker({ typescript: true, vueTsc: true }),
       // compress assets
       // https://github.com/vbenjs/vite-plugin-compression
       // viteCompression(),
@@ -58,12 +62,12 @@ export default defineConfig(async ({ mode }): Promise<UserConfig> => {
             // Split external library from transpiled code.
             vue: [
               'vue',
-              '@vue/composition-api',
               'vue-class-component',
               'vue-property-decorator',
               'vue-router',
-              'vuex',
               'vue2-helpers',
+              'vuex',
+              '@vue/composition-api',
             ],
           },
           plugins: [
@@ -91,18 +95,18 @@ export default defineConfig(async ({ mode }): Promise<UserConfig> => {
       },
       target: 'es2021',
       /*
-    // Minify option
-    // https://vitejs.dev/config/#build-minify
-    minify: 'terser',
-    terserOptions: {
-      ecma: 2020,
-      parse: {},
-      compress: { drop_console: true },
-      mangle: true, // Note `mangle.properties` is `false` by default.
-      module: true,
-      output: { comments: true, beautify: false },
-    },
-    */
+      // Minify option
+      // https://vitejs.dev/config/#build-minify
+      minify: 'terser',
+      terserOptions: {
+        ecma: 2020,
+        parse: {},
+        compress: { drop_console: true },
+        mangle: true, // Note `mangle.properties` is `false` by default.
+        module: true,
+        output: { comments: true, beautify: false },
+      },
+      */
     },
   };
   // Output build dates to Meta.ts
