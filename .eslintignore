@@ -3,5 +3,3 @@
 .yarn/
 dist/
 public/assets/
-components.d.ts
-index.html

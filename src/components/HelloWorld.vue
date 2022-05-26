@@ -131,6 +131,15 @@
       </li>
       <li>
         <a
+          href="https://github.com/vuejs/composition-api"
+          target="_blank"
+          rel="noopener"
+        >
+          vue2-composition-api
+        </a>
+      </li>
+      <li>
+        <a
           href="https://github.com/vuejs/awesome-vue"
           target="_blank"
           rel="noopener"
