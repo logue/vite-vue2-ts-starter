@@ -20,7 +20,7 @@ import HelloWorld from '@/components/HelloWorld.vue';
 export default class HomePage extends Vue {
   /*
   // Props
-  @Prop()
+  @Prop({ type: String, default: 'prop' })
   readonly prop: string = 'prop';
 
   // Model and Data
