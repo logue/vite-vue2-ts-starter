@@ -1,13 +1,13 @@
 {
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "volar.icon.preview": true,
   "stylelint.validate": [
     "css",
     "less",
     "postcss",
     "vue"
   ],
-  "[ignore]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  }
+  "volar.icon.preview": true
 }
