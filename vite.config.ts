@@ -64,6 +64,7 @@ export default defineConfig(async ({ mode }): Promise<UserConfig> => {
               'vue-class-component',
               'vue-property-decorator',
               'vue-router',
+              'vue2-teleport',
               'vue2-helpers',
               'vue2-helpers/vue-router',
               'vue2-helpers/vuex',
