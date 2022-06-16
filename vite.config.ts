@@ -1,4 +1,4 @@
-import { createVuePlugin as Vue } from 'vite-plugin-vue2';
+import { createVuePlugin as vue } from 'vite-plugin-vue2';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig, type UserConfig } from 'vite';
 import checker from 'vite-plugin-checker';
@@ -35,7 +35,7 @@ export default defineConfig(async ({ mode }): Promise<UserConfig> => {
     plugins: [
       // Vue2
       // https://github.com/underfin/vite-plugin-vue2
-      Vue({
+      vue({
         target: 'esnext',
       }),
       // vite-plugin-checker
@@ -44,8 +44,7 @@ export default defineConfig(async ({ mode }): Promise<UserConfig> => {
         typescript: true,
         vueTsc: true,
         eslint: {
-          lintCommand:
-            'eslint ./src/ --fix --cache --cache-location ./node_modules/.vite/vite-plugin-eslint', // for example, lint .ts & .tsx
+          lintCommand: 'eslint', // for example, lint .ts & .tsx
         },
       }),
       // compress assets
