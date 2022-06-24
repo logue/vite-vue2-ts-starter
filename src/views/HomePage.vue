@@ -41,7 +41,7 @@ export default class HomePage extends Vue {
       '@context': 'http://schema.org',
       '@type': 'WebSite',
       name: 'Vite Vue2 TypeScript Startar',
-      url: 'https://github.com/logue/vite-vuetify-ts-starter',
+      url: 'https://github.com/logue/vite-vue2-ts-starter',
       description: 'Vite Vue2 TypeScript Demo Page',
     },
     null,

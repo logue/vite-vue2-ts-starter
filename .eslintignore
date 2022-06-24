@@ -3,3 +3,4 @@
 .yarn/
 dist/
 public/assets/
+tsconfig.node.json
