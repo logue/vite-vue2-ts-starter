@@ -6,10 +6,7 @@ import type {
   MutationTree,
   StoreOptions,
 } from 'vuex';
-import Vuex, { Store } from 'vuex';
-import Vue from 'vue';
-
-Vue.use(Vuex);
+import { createStore } from 'vue2-helpers/vuex';
 
 // TODO: State Interface
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
@@ -90,4 +87,4 @@ const store: StoreOptions<RootState> = {
   ],
 };
 
-export default new Store<RootState>(store);
+export default createStore(store);
