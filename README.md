@@ -4,6 +4,8 @@
 <img src="https://user-images.githubusercontent.com/480173/157433672-3d896453-9689-45e2-bbef-d91b29d72c4b.png" alt="logo" width="300" height="300" />
 </p>
 
+**Vue 2.7.0 supported!** above 0.5.0.
+
 ## Description
 
 This template is for using Vue2 with TypeScript in Vite. Includes [vue-router](https://router.vuejs.org/) and [Vuex](https://vuex.vuejs.org/), [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator).
@@ -126,3 +128,8 @@ When adding or deleting files, an error may occur and even if the error is corre
 Due to [yarn issues](https://github.com/yarnpkg/berry/issues/4448), it may not work properly if the path contains non-ASCII characters (such as 日本語 or 한국어, 中文 etc.).
 
 [^1]: <https://github.com/vuejs/composition-api/issues/136>
+
+## See Also
+
+- [vite-vue2-vuetify-ts-starter](https://github.com/logue/vite-vue2-vuetify-ts-starter) - UI library using Vuetify2
+- [laravel9-vite-vue2-starter](https://github.com/logue/laravel9-vite-vue2-starter) - for Laravel.

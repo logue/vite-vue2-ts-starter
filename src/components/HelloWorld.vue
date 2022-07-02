@@ -60,15 +60,6 @@
           typescript
         </a>
       </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/composition-api"
-          target="_blank"
-          rel="noopener"
-        >
-          @vue/composition-api
-        </a>
-      </li>
     </ul>
     <h3>Essential Links</h3>
     <ul>
@@ -131,15 +122,6 @@
       </li>
       <li>
         <a
-          href="https://github.com/vuejs/composition-api"
-          target="_blank"
-          rel="noopener"
-        >
-          vue2-composition-api
-        </a>
-      </li>
-      <li>
-        <a
           href="https://github.com/vuejs/awesome-vue"
           target="_blank"
           rel="noopener"
@@ -152,21 +134,32 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { defineComponent, ref, type Ref, type SetupContext } from 'vue';
 
 import type MetaInterface from '@/interfaces/MetaInterface';
 import Meta from '@/Meta';
 
-@Component
 /** HelloWorld Component */
-export default class HelloWorld extends Vue {
-  /** Meta information */
-  readonly meta: MetaInterface = Meta;
+export default defineComponent({
+  props: {
+    /** Prop message */
+    msg: { type: String, required: true },
+  },
+  /**
+   * Setup
+   *
+   * @param _props - Props
+   * @param _context - Context
+   */
+  setup(_props, _context: SetupContext) {
+    /** Meta information */
+    const meta: Ref<MetaInterface> = ref(Meta);
 
-  /** Prop message */
-  @Prop()
-  readonly msg!: string;
-}
+    return {
+      meta,
+    };
+  },
+});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

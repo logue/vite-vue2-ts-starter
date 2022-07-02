@@ -1,4 +1,4 @@
-import { createVuePlugin as vue } from 'vite-plugin-vue2';
+import vue from '@vitejs/plugin-vue2';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig, type UserConfig } from 'vite';
 import checker from 'vite-plugin-checker';
@@ -34,10 +34,8 @@ export default defineConfig(async ({ mode }): Promise<UserConfig> => {
     },
     plugins: [
       // Vue2
-      // https://github.com/underfin/vite-plugin-vue2
-      vue({
-        target: 'esnext',
-      }),
+      // https://github.com/vitejs/vite-plugin-vue2
+      vue(),
       // vite-plugin-checker
       // https://github.com/fi3ework/vite-plugin-checker
       checker({

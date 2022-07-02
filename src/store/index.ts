@@ -6,7 +6,7 @@ import type {
   MutationTree,
   StoreOptions,
 } from 'vuex';
-import { createStore } from 'vue2-helpers/vuex';
+import { createStore } from '@logue/vue2-helpers/dist/vuex';
 
 // TODO: State Interface
 // eslint-disable-next-line @typescript-eslint/no-empty-interface

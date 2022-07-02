@@ -12,16 +12,20 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { defineComponent, type SetupContext } from 'vue';
 
-@Component
 /** App Component */
-export default class App extends Vue {
-  /** Before create */
-  beforeCreate() {
+export default defineComponent({
+  /**
+   * Setup
+   *
+   * @param _props - Props
+   * @param _context - Context
+   */
+  setup(_props, _context: SetupContext) {
     document.title = import.meta.env.VITE_APP_TITLE || 'Vue APP';
-  }
-}
+  },
+});
 </script>
 
 <style>
