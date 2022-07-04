@@ -1,6 +1,6 @@
 import type { RouteConfig } from 'vue-router';
 import type VueRouter from 'vue-router';
-import { createRouter } from '@logue/vue2-helpers/dist/vue-router';
+import { createRouter } from '@logue/vue2-helpers/vue-router';
 
 import HomePage from '@/views/HomePage.vue';
 
