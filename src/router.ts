@@ -2,21 +2,16 @@ import type { RouteConfig } from 'vue-router';
 import type VueRouter from 'vue-router';
 import { createRouter } from '@logue/vue2-helpers/vue-router';
 
-import HomePage from '@/views/HomePage.vue';
-
 /** Router Configure */
 const routes: RouteConfig[] = [
   {
     path: '/',
     name: 'Home',
-    component: HomePage,
+    component: () => import('@/views/HomePage.vue'),
   },
   {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import('@/views/AboutPage.vue'),
   },
 ];

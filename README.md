@@ -132,4 +132,5 @@ Due to [yarn issues](https://github.com/yarnpkg/berry/issues/4448), it may not w
 ## See Also
 
 - [vite-vue2-vuetify-ts-starter](https://github.com/logue/vite-vue2-vuetify-ts-starter) - UI library using Vuetify2
-- [laravel9-vite-vue2-starter](https://github.com/logue/laravel9-vite-vue2-starter) - for Laravel.
+- [laravel9-vite-vue2-starter](https://github.com/logue/laravel9-vite-vue2-starter) - for Laravel + Breeze.
+- [vite-vue2-ts-ssr-starter](https://github.com/logue/vite-vue2-ts-ssr-starter) - SSR (Server Side Rendering) Version.

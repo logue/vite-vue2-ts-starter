@@ -62,11 +62,10 @@ export default defineConfig(async ({ mode }): Promise<UserConfig> => {
               'vue-property-decorator',
               'vue-router',
               'vue2-teleport',
+              'vuex',
               '@logue/vue2-helpers',
               '@logue/vue2-helpers/vue-router',
               '@logue/vue2-helpers/vuex',
-              '@logue/vue2-helpers/vuetify',
-              'vuex',
             ],
           },
           plugins: [
