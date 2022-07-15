@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <img
-      alt="Vue logo"
-      :src="require('@/assets/logo.svg')"
-      height="200"
-      width="200"
-    />
+    <a href="https://vitejs.dev" target="_blank">
+      <img :src="viteLogo" class="logo" alt="Vite logo" />
+    </a>
+    <a href="https://vuejs.org/" target="_blank">
+      <img :src="vueLogo" class="logo vue" alt="Vue logo" />
+    </a>
     <hello-world msg="Welcome to Your Vue.js + TypeScript App" />
     <teleport to="head">
       <meta
@@ -25,8 +25,13 @@ import { defineComponent, ref, watch, type Ref, type SetupContext } from 'vue';
 // import { useStore } from '@logue/vue2-helpers/dist/vuex';
 import { useRoute } from '@logue/vue2-helpers/vue-router';
 
+// Components
 import HelloWorld from '@/components/HelloWorld.vue';
 import Teleport from 'vue2-teleport';
+
+// Logo
+import vueLogo from '@/assets/vue.svg';
+import viteLogo from '@/assets/vite.svg';
 
 /** Home Component */
 export default defineComponent({
@@ -61,6 +66,7 @@ export default defineComponent({
           '@type': 'WebSite',
           name: 'Vite Vue2 TypeScript Startar',
           url: 'https://github.com/logue/vite-vue2-ts-starter',
+          logo: vueLogo,
           description: 'Vite Vue2 TypeScript Demo Page',
         },
         null,
@@ -85,8 +91,24 @@ export default defineComponent({
 
     return {
       data,
+      vueLogo,
+      viteLogo,
       jsonLd,
     };
   },
 });
 </script>
+
+<style scoped>
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #42b883aa);
+}
+</style>
