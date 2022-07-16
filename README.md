@@ -14,6 +14,8 @@ In addition, [ESLint](https://eslint.org/), [Stylelint](https://stylelint.io/), 
 
 Also, when the development server is executed, it is checked in real time by [vite-plugin-checker](https://github.com/fi3ework/vite-plugin-checker).
 
+[Vitest](https://github.com/vuejs/vue-test-utils) is included in the program for testing.
+
 ### Composition API
 
 It also supports the [Composition API](https://composition-api.vuejs.org/). The installed VueRouter and Vuex are for Vue2, but you can use the functions (such as `useRouter()`, `useRoute()` and `useStore()`) for the composition API for Vue3.
@@ -107,6 +109,8 @@ Notice: For Vue3, `:as="'script'"` becomes `is="script"`.
 | lint          | Run ESLint and prettier.                           |
 | lint:style    | Run Stylelint.                                     |
 | lint:markup   | Check vue markup.                                  |
+| test          | Run vitest                                         |
+| coverage      | Output Coverage Report.                            |
 | build         | Build for production.                              |
 | build:analyze | Execute Bundle Analyzer                            |
 | build:deploy  | Build for production without checking.             |

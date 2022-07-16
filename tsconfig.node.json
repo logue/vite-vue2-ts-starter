@@ -4,8 +4,7 @@
     "composite": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true
+    "moduleResolution": "node"
   },
   "include": ["vite.config.ts"]
 }
