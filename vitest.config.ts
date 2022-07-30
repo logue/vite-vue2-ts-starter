@@ -2,10 +2,15 @@ import { defineConfig } from 'vitest/config';
 import vue from '@vitejs/plugin-vue2';
 import path from 'path';
 
+/**
+ * Vitest Configure
+ *
+ * @see {@link https://vitest.dev/config/}
+ */
 export default defineConfig({
   // Resolver
   resolve: {
-    // https://vitejs.dev/config/#resolve-alias
+    // https://vitejs.dev/config/shared-options.html#resolve-alias
     alias: [
       {
         // vue @ shortcut fix
