@@ -27,7 +27,6 @@ import { useRoute } from '@logue/vue2-helpers/vue-router';
 
 // Components
 import HelloWorld from '@/components/HelloWorld.vue';
-import Teleport from 'vue2-teleport';
 
 // Logo
 import vueLogo from '@/assets/vue.svg';
@@ -38,7 +37,6 @@ export default defineComponent({
   /** Components */
   components: {
     HelloWorld,
-    Teleport,
   },
   /** Props */
   props: {
