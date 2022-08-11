@@ -2,10 +2,10 @@
   "$schema": "https://json.schemastore.org/package.json",
   "name": "vite-vue2-ts-starter",
   "description": "Vue2 TypeScript Startar project for Vite.",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "license": "MIT",
-  "private": true,
   "type": "module",
+  "private": true,
   "author": {
     "name": "Logue",
     "email": "logue@hotmail.co.jp",
@@ -21,9 +21,9 @@
   },
   "engines": {
     "node": ">=16.16.0",
-    "yarn": ">=1.22.4"
+    "yarn": ">=1.22.10"
   },
-  "packageManager": "yarn@3.2.1",
+  "packageManager": "yarn@3.2.2",
   "scripts": {
     "dev": "vite",
     "clean": "rimraf ./node_modules/.vite",
@@ -79,7 +79,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rollup-plugin-visualizer": "^5.7.1",
-    "stylelint": "^14.9.1",
+    "stylelint": "^14.10.0",
     "stylelint-config-recommended-scss": "^7.0.0",
     "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-order": "^5.0.0",
@@ -89,7 +89,7 @@
     "vitest": "^0.21.1",
     "vue-eslint-parser": "^9.0.3",
     "vue-template-compiler": "^2.7.8",
-    "vue-tsc": "^0.39.5"
+    "vue-tsc": "^0.40.1"
   },
   "husky": {
     "hooks": {

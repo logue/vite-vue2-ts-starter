@@ -28,8 +28,6 @@ With the standard support for [Composition API](https://composition-api.vuejs.or
 
 Vue3 adds a mechanism called [`Teleport`](https://v3.vuejs.org/guide/teleport.html), which allows you to install vue components anywhere. This starter template is for vue2, but you can do the same with [vue2-teleport](https://www.npmjs.com/package/vue2-teleport).
 
-⚠ Notice: For Vue3, `:is="'script'"` becomes `as="script"`.
-
 #### Teleport JSON-LD Example
 
 If you want to include [JSON-LD](https://json-ld.org/), enter as follows.
@@ -69,6 +67,8 @@ export default defineComponent({
 ```
 
 JSON-LD is literally a `script`, so it can't be embedded directly, so it's a roundabout thing like this, but simple things like `meta` tags are reflected by simply inserting a tag.
+
+⚠ Notice: `:is="'script'"` becomes `:as="'script'"` in Vue3.
 
 ### Vue i18n
 

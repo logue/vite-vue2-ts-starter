@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, watch, type Ref, type SetupContext } from 'vue';
-// import { useStore } from '@logue/vue2-helpers/dist/vuex';
+// import { useStore } from '@logue/vue2-helpers/vuex';
 import { useRoute } from '@logue/vue2-helpers/vue-router';
 
 // Components
