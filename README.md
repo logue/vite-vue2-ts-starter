@@ -113,6 +113,15 @@ Due to [yarn issues](https://github.com/yarnpkg/berry/issues/4448), it may not w
 
 From 0.7.4, the default project type is module. If you find a plugin that doesn't work, remove `"type": "module"` from package.json. ([Laravel vite plugin](https://github.com/laravel/vite-plugin) etc.)
 
+## Checklist
+
+When you use this template, try follow the checklist to update your info properly
+
+- [ ] Change the author name in `LICENSE`
+- [ ] Change the favicon in `public`
+- [ ] Remove the `.github` folder which contains the funding info
+- [ ] Clean up the READMEs and remove routes
+
 ## See Also
 
 - [vite-vue2-vuetify-ts-starter](https://github.com/logue/vite-vue2-vuetify-ts-starter) - UI library using Vuetify2
