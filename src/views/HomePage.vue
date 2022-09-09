@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <a href="https://vitejs.dev" target="_blank">
-      <img :src="viteLogo" class="logo" alt="Vite logo" />
+      <img :src="require('@/assets/vite.svg')" class="logo" alt="Vite logo" />
     </a>
     <a href="https://vuejs.org/" target="_blank">
-      <img :src="vueLogo" class="logo vue" alt="Vue logo" />
+      <img :src="require('@/assets/vue.svg')" class="logo vue" alt="Vue logo" />
     </a>
     <hello-world msg="Welcome to Your Vue.js + TypeScript App" />
     <teleport to="head">
@@ -30,7 +30,6 @@ import HelloWorld from '@/components/HelloWorld.vue';
 
 // Logo
 import vueLogo from '@/assets/vue.svg';
-import viteLogo from '@/assets/vite.svg';
 
 /** Home Component */
 export default defineComponent({
@@ -54,8 +53,7 @@ export default defineComponent({
     /** Vuex */
     // const store = useStore();
 
-    const data: Ref<string | undefined> = ref();
-
+    /** JSON LD Sample */
     const jsonLd: Ref<string> = ref(
       JSON.stringify(
         {
@@ -88,9 +86,6 @@ export default defineComponent({
     );
 
     return {
-      data,
-      vueLogo,
-      viteLogo,
       jsonLd,
     };
   },

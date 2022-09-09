@@ -8,6 +8,13 @@
     <main>
       <router-view />
     </main>
+    <teleport to="head">
+      <link
+        rel="icon"
+        :href="require('@/assets/vue.svg')"
+        type="image/svg+xml"
+      />
+    </teleport>
   </div>
 </template>
 
