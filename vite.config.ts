@@ -1,9 +1,11 @@
-import vue from '@vitejs/plugin-vue2';
+import { defineConfig, loadEnv, type UserConfig } from 'vite';
 import { visualizer } from 'rollup-plugin-visualizer';
-import { defineConfig, type UserConfig } from 'vite';
 import checker from 'vite-plugin-checker';
-import path from 'path';
 import fs from 'fs';
+import path from 'path';
+import vue from '@vitejs/plugin-vue2';
+import { fileURLToPath } from 'url';
+import { config } from 'process';
 
 /**
  * Vite Configure
@@ -17,13 +19,9 @@ export default defineConfig(async ({ command, mode }): Promise<UserConfig> => {
     // Resolver
     resolve: {
       // https://vitejs.dev/config/shared-options.html#resolve-alias
-      alias: [
-        {
-          // vue @ shortcut fix
-          find: '@/',
-          replacement: `${path.resolve(__dirname, './src')}/`,
-        },
-      ],
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+      },
     },
     // https://vitejs.dev/config/server-options.html
     server: {
@@ -54,7 +52,7 @@ export default defineConfig(async ({ command, mode }): Promise<UserConfig> => {
     build: {
       // Build Target
       // https://vitejs.dev/config/build-options.html#build-target
-      target: 'es2021',
+      target: 'es2022',
       // Rollup Options
       // https://vitejs.dev/config/build-options.html#build-rollupoptions
       rollupOptions: {
