@@ -3,7 +3,7 @@ import Vue from 'vue';
 
 import router from '@/router';
 import store from '@/store';
-import teleport from 'vue2-teleport';
+import teleport from '@logue/vue2-helpers/teleport';
 
 import '@/style.css';
 import App from '@/App.vue';

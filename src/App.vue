@@ -30,7 +30,7 @@ export default defineComponent({
    * @param _context - Context
    */
   setup(_props, _context: SetupContext) {
-    document.title = import.meta.env.VITE_APP_TITLE || 'Vue APP';
+    document.title = import.meta.env.VITE_APP_TITLE || 'Vite Vue2 Application';
   },
 });
 </script>

@@ -3,7 +3,14 @@
     <section>
       <h1 v-text="msg" />
       <p>
-        Build:
+        <a
+          href="https://github.com/logue/vite-vue2-ts-starter#readme"
+          target="_blank"
+          rel="noopener"
+        >
+          vite-vue2-ts-starter
+        </a>
+        / Build:
         <time
           :datetime="meta.date"
           v-text="new Date(meta.date).toLocaleString()"

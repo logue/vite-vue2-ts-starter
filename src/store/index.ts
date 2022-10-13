@@ -1,4 +1,5 @@
 /** Vuex Store */
+import { createStore } from '@logue/vue2-helpers/vuex';
 import type {
   ActionContext,
   ActionTree,
@@ -6,37 +7,27 @@ import type {
   MutationTree,
   StoreOptions,
 } from 'vuex';
-import { createStore } from '@logue/vue2-helpers/vuex';
 
 // TODO: State Interface
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface RootState {
-  /*
   exampleData: any | null;
-  */
 }
 
 /** State */
 const state: RootState = {
-  /*
   exampleData: null,
-  */
 };
 
 /** Getters */
 const getters: GetterTree<RootState, RootState> = {
-  /*
-  exampleGetter: s => s.exampleData,
-  */
+  example: s => s.exampleData,
 };
 
 /** Mutation */
 const mutations: MutationTree<RootState> = {
-  /*
   exampleMutation(s, payload) {
     s.exampleData = payload;
   },
-  */
 };
 
 /** Action */
