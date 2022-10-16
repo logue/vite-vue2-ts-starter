@@ -65,35 +65,30 @@
             rollup-plugin-visualizer
           </a>
         </li>
+        <li>
+          <a href="https://github.com/logue/vue2-helpers" target="_blank">
+            @logue/vue2-helpers
+          </a>
+        </li>
       </ul>
     </section>
     <section>
       <h3>Essential Links</h3>
       <ul>
         <li>
-          <a href="https://vuejs.org" target="_blank" rel="noopener">
-            Core Docs
-          </a>
+          <a href="https://vuejs.org" target="_blank">Core Docs</a>
         </li>
         <li>
-          <a href="https://forum.vuejs.org" target="_blank" rel="noopener">
-            Forum
-          </a>
+          <a href="https://forum.vuejs.org" target="_blank">Forum</a>
         </li>
         <li>
-          <a href="https://chat.vuejs.org" target="_blank" rel="noopener">
-            Community Chat
-          </a>
+          <a href="https://chat.vuejs.org" target="_blank">Community Chat</a>
         </li>
         <li>
-          <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">
-            Twitter
-          </a>
+          <a href="https://twitter.com/vuejs" target="_blank">Twitter</a>
         </li>
         <li>
-          <a href="https://news.vuejs.org" target="_blank" rel="noopener">
-            News
-          </a>
+          <a href="https://news.vuejs.org" target="_blank">News</a>
         </li>
         <li>
           <a
@@ -110,55 +105,16 @@
       <h3>Ecosystem</h3>
       <ul>
         <li>
-          <a href="https://v3.router.vuejs.org" target="_blank" rel="noopener">
-            vue-router
-          </a>
+          <a href="https://v3.router.vuejs.org" target="_blank">vue-router</a>
         </li>
         <li>
-          <a href="https://v3.vuex.vuejs.org" target="_blank" rel="noopener">
-            vuex
-          </a>
+          <a href="https://v3.vuex.vuejs.org" target="_blank">vuex</a>
         </li>
         <li>
-          <a
-            href="https://github.com/logue/vue2-helpers"
-            target="_blank"
-            rel="noopener"
-          >
-            @logue/vue2-helpers
-          </a>
+          <a href="https://vitest.dev/" target="_blank">vitest</a>
         </li>
         <li>
-          <a href="https://devtools.vuejs.org/" target="_blank" rel="noopener">
-            vue-devtools
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/Mechazawa/vue2-teleport"
-            target="_blank"
-            rel="noopener"
-          >
-            vue2-teleport
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://class-component.vuejs.org/"
-            target="_blank"
-            rel="noopener"
-          >
-            vue-class-component
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/kaorun343/vue-property-decorator"
-            target="_blank"
-            rel="noopener"
-          >
-            vue-property-decorator
-          </a>
+          <a href="https://devtools.vuejs.org/" target="_blank">vue-devtools</a>
         </li>
       </ul>
     </section>
