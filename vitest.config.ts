@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitest/config';
-import { fileURLToPath } from 'url';
 import vue from '@vitejs/plugin-vue2';
+
+import { fileURLToPath, URL } from 'node:url';
 
 /**
  * Vitest Configure

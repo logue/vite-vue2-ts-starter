@@ -4,4 +4,4 @@
 dist/
 coverage/
 public/assets/
-tsconfig.node.json
+tsconfig.*.json

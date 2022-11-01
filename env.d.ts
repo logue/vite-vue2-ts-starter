@@ -1,12 +1,11 @@
-// eslint-disable-next-line spaced-comment
+/* eslint-disable spaced-comment */
 /// <reference types="vite/client" />
+/// <reference types="node" />
 
 // Vue
 declare module '*.vue' {
-  import type { DefineComponent } from 'vue';
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/ban-types
-  const component: DefineComponent<{}, {}, any>;
-  export default component;
+  import Vue from 'vue';
+  export default Vue;
 }
 
 interface ImportMetaEnv {
