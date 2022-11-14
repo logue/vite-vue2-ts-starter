@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/package.json",
   "name": "vite-vue2-ts-starter",
   "description": "Vue2 TypeScript Startar project for Vite.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "type": "module",
   "private": true,
@@ -21,7 +21,7 @@
   },
   "engines": {
     "node": ">=18.12.1",
-    "yarn": ">=1.22.10"
+    "yarn": ">=1.22.19"
   },
   "packageManager": "yarn@3.2.4",
   "scripts": {
@@ -81,7 +81,7 @@
     "rimraf": "^3.0.2",
     "rollup-plugin-visualizer": "^5.8.3",
     "sass": "^1.56.1",
-    "stylelint": "^14.14.1",
+    "stylelint": "^14.15.0",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-recommended-scss": "^8.0.0",
     "stylelint-config-recommended-vue": "^1.4.0",

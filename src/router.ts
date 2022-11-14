@@ -1,6 +1,5 @@
 /** Vue Router Configure */
 import { createRouter } from '@logue/vue2-helpers/vue-router';
-import type VueRouter from 'vue-router';
 import type { RouteRecordRaw } from '@logue/vue2-helpers/vue-router';
 
 /** Router Configure */
@@ -17,7 +16,7 @@ const routes: RouteRecordRaw[] = [
   },
 ];
 
-const router: VueRouter = createRouter({
+const router = createRouter({
   base: import.meta.env.BASE_URL,
   mode: 'history', // abstract, hash, history
   routes,

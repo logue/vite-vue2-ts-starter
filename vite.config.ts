@@ -1,6 +1,6 @@
+import { checker } from 'vite-plugin-checker';
 import { defineConfig, type UserConfig } from 'vite';
 import { visualizer } from 'rollup-plugin-visualizer';
-import checker from 'vite-plugin-checker';
 import vue from '@vitejs/plugin-vue2';
 
 import { fileURLToPath, URL } from 'node:url';
@@ -20,6 +20,7 @@ export default defineConfig(async ({ command, mode }): Promise<UserConfig> => {
       // https://vitejs.dev/config/shared-options.html#resolve-alias
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
+        '~': fileURLToPath(new URL('./node_modules', import.meta.url)),
       },
     },
     // https://vitejs.dev/config/server-options.html

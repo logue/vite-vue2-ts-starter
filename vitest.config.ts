@@ -13,7 +13,8 @@ export default defineConfig({
   resolve: {
     // https://vitejs.dev/config/shared-options.html#resolve-alias
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+        '~': fileURLToPath(new URL('./node_modules', import.meta.url)),
     },
   },
   // plugins
