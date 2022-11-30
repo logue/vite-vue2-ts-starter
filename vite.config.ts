@@ -15,21 +15,6 @@ export default defineConfig(async ({ command, mode }): Promise<UserConfig> => {
   const config: UserConfig = {
     // // https://vitejs.dev/config/shared-options.html#base
     base: './',
-    // Resolver
-    resolve: {
-      // https://vitejs.dev/config/shared-options.html#resolve-alias
-      alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url)),
-        '~': fileURLToPath(new URL('./node_modules', import.meta.url)),
-      },
-    },
-    // https://vitejs.dev/config/server-options.html
-    server: {
-      fs: {
-        // Allow serving files from one level up to the project root
-        allow: ['..'],
-      },
-    },
     plugins: [
       // Vue2
       // https://github.com/vitejs/vite-plugin-vue2
@@ -48,6 +33,21 @@ export default defineConfig(async ({ command, mode }): Promise<UserConfig> => {
       // https://github.com/vbenjs/vite-plugin-compression
       // viteCompression(),
     ],
+    // Resolver
+    resolve: {
+      // https://vitejs.dev/config/shared-options.html#resolve-alias
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+        '~': fileURLToPath(new URL('./node_modules', import.meta.url)),
+      },
+    },
+    // https://vitejs.dev/config/server-options.html
+    server: {
+      fs: {
+        // Allow serving files from one level up to the project root
+        allow: ['..'],
+      },
+    },
     // Build Options
     // https://vitejs.dev/config/build-options.html
     build: {
