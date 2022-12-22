@@ -81,8 +81,8 @@ export default defineConfig(async ({ command, mode }): Promise<UserConfig> => {
                 visualizer({
                   open: true,
                   filename: 'dist/stats.html',
-                  gzipSize: true,
-                  brotliSize: true,
+                  // gzipSize: true,
+                  // brotliSize: true,
                 })
               : undefined,
             /*
@@ -94,7 +94,7 @@ export default defineConfig(async ({ command, mode }): Promise<UserConfig> => {
               },
             }),
             */
-          ].filter(item => item !== undefined),
+          ],
         },
       },
       // Minify option
