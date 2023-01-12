@@ -13,7 +13,7 @@ import fs from 'node:fs';
  */
 export default defineConfig(async ({ command, mode }): Promise<UserConfig> => {
   const config: UserConfig = {
-    // // https://vitejs.dev/config/shared-options.html#base
+    // https://vitejs.dev/config/shared-options.html#base
     base: './',
     plugins: [
       // Vue2
@@ -40,6 +40,7 @@ export default defineConfig(async ({ command, mode }): Promise<UserConfig> => {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
         '~': fileURLToPath(new URL('./node_modules', import.meta.url)),
       },
+      extensions: ['.js', '.json', '.jsx', '.mjs', '.ts', '.tsx', '.vue'],
     },
     // https://vitejs.dev/config/server-options.html
     server: {
@@ -85,15 +86,6 @@ export default defineConfig(async ({ command, mode }): Promise<UserConfig> => {
                   // brotliSize: true,
                 })
               : undefined,
-            /*
-            // if you use Code encryption by rollup-plugin-obfuscator
-            // https://github.com/getkey/rollup-plugin-obfuscator
-            obfuscator({
-              globalOptions: {
-                debugProtection: true,
-              },
-            }),
-            */
           ],
         },
       },
