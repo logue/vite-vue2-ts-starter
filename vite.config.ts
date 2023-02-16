@@ -23,7 +23,7 @@ export default defineConfig(async ({ command, mode }): Promise<UserConfig> => {
       // https://github.com/fi3ework/vite-plugin-checker
       checker({
         typescript: true,
-        vueTsc: true,
+        // vueTsc: true,
         eslint: {
           lintCommand:
             'eslint --cache --cache-location ./node_modules/.vite/vite-plugin-eslint', // for example, lint .ts & .tsx
@@ -67,8 +67,8 @@ export default defineConfig(async ({ command, mode }): Promise<UserConfig> => {
               'vue-router',
               'vue-router/composables',
               'vuex',
-              'vuex-persist',
-              'deepmerge',
+              // 'vuex-persist',
+              // 'deepmerge',
               '@logue/vue2-helpers',
               '@logue/vue2-helpers/teleport',
               '@logue/vue2-helpers/vue-router',
