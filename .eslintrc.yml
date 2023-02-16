@@ -13,7 +13,6 @@ extends:
   - plugin:vue/recommended
   - plugin:vuejs-accessibility/recommended
   - plugin:yaml/recommended
-  - plugin:jsonc/prettier
   - '@vue/eslint-config-prettier'
 plugins:
   - '@typescript-eslint'
