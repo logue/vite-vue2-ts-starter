@@ -6,6 +6,10 @@
 
 ## Description
 
+⚠ Important Notice: Vue 2 will reach End of Life (EOL) on December 31st, 2023.
+For this reason, we do not recommend using this template for new projects.
+See [Vue 2 LTS, EOL & Extended Support](https://v2.vuejs.org/lts/).
+
 This template is for using Vue2 with TypeScript in Vite. Includes [vue-router](https://router.vuejs.org/) and [Vuex](https://vuex.vuejs.org/).
 
 In addition, [ESLint](https://eslint.org/), [Stylelint](https://stylelint.io/), and [Prettier](https://prettier.io/) are also included and are set to be executed automatically at runtime and commit. (Since these settings are set strictly, please relax yourself.)

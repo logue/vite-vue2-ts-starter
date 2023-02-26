@@ -1,10 +1,10 @@
+import { fileURLToPath, URL } from 'node:url';
+import fs from 'node:fs';
+
 import { checker } from 'vite-plugin-checker';
 import { defineConfig, type UserConfig } from 'vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import vue from '@vitejs/plugin-vue2';
-
-import { fileURLToPath, URL } from 'node:url';
-import fs from 'node:fs';
 
 /**
  * Vite Configure

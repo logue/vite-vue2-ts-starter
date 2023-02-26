@@ -1,26 +1,34 @@
 /** Vue Router Configure */
-import { createRouter } from '@logue/vue2-helpers/vue-router';
-import type { RouteRecordRaw } from '@logue/vue2-helpers/vue-router';
-import type VueRouter from 'vue-router';
+import {
+  createRouter,
+  type Router,
+  type RouteRecordRaw,
+} from '@logue/vue2-helpers/vue-router';
+
+import HomeView from '@/views/HomeView.vue';
 
 /** Router Configure */
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@/views/HomePage.vue'),
+    component: HomeView,
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import('@/views/AboutPage.vue'),
+    // route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import('@/views/AboutView.vue'),
   },
 ];
 
-const router: VueRouter = createRouter({
+/** Vue Router */
+const router = createRouter({
   base: import.meta.env.BASE_URL,
   mode: 'history', // abstract, hash, history
   routes,
 });
 
-export default router;
+export default router as Router;

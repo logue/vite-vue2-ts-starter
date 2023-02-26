@@ -10,7 +10,7 @@ import type {
 
 // TODO: State Interface
 export interface RootState {
-  exampleData: any | null;
+  exampleData?: any;
 }
 
 /** State */

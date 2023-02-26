@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitest/config';
+import { configDefaults, defineConfig } from 'vitest/config';
 import vue from '@vitejs/plugin-vue2';
 
 import { fileURLToPath, URL } from 'node:url';
@@ -35,8 +35,10 @@ export default defineConfig({
   },
   test: {
     // https://vitest.dev/guide/#configuring-vitest
+    environment: 'jsdom',
     globals: true,
     globalSetup: [fileURLToPath(new URL('./vitest/setup.ts', import.meta.url))],
-    environment: 'jsdom',
+    exclude: [...configDefaults.exclude, 'e2e/*'],
+    root: fileURLToPath(new URL('./', import.meta.url)),
   },
 });
