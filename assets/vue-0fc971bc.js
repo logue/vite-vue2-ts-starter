@@ -16,6 +16,10 @@
  *
  * Build: 2023-02-14T05:57:31.435Z
  */on.prototype.isReady=function(){return new Promise((t,e)=>{this.onReady(t,e)})};function wl(t){return Qa?.use(on),new on(t)}/*!
+  * vue-router v3.6.5
+  * (c) 2022 Evan You
+  * @license MIT
+  */function Cl(){var t=Go().proxy.$root;if(!t._$route){var e=ts(!0).run(function(){return ln(Object.assign({},t.$router.currentRoute))});t._$route=e,t.$router.afterEach(function(r){Object.assign(e,r)})}return t._$route}/*!
  * vuex v3.6.2
  * (c) 2021 Evan You
  * @license MIT
@@ -28,7 +32,7 @@
  * @see {@link https://github.com/logue/vue2-helpers#readme}
  *
  * Build: 2023-02-14T05:57:31.435Z
- */function Cl(t){return Qa?.use(yl),new J(t)}/**
+ */function $l(t){return Qa?.use(yl),new J(t)}/**
  * @logue/vue2-helpers
  *
  * @description A util package to use Vue 2 with Composition API easily
@@ -37,8 +41,4 @@
  * @see {@link https://github.com/logue/vue2-helpers#readme}
  *
  * Build: 2023-02-14T05:57:31.435Z
- */const _l={name:"Teleport",props:{to:{type:String,required:!0},where:{type:String,default:"after"},disabled:{type:Boolean,default:!1}},setup(t,e){const r=Kt(),n=Kt([]),i=Kt(!1),a=Kt(null),o=Kt(null),s=Kt(null);wr(()=>t.to,()=>u()),wr(()=>t.where,()=>u()),wr(()=>t.disabled,_=>{_?(c(),b()):(g(),f())}),Ms(()=>{r.value&&(n.value=Array.from(r.value.childNodes)),t.disabled||g(),u()}),Ns(()=>{c(),b()});const u=()=>{t.disabled||f()},f=()=>{if(i.value=!1,s.value=document.querySelector(t.to),!s.value){c(),i.value=!0;return}t.where==="before"?s.value.prepend(v()):s.value.appendChild(v())},c=()=>{r.value?.appendChild(v()),s.value=null},v=()=>{const _=document.createDocumentFragment();return n.value.forEach(y=>_.appendChild(y)),_},d=_=>{let y=!1;for(let w=0;w<_.length;w++){const C=_[w],E=Array.from(C.addedNodes).filter(R=>!n.value.includes(R));s.value&&Array.from(C.removedNodes).includes(s.value)?(c(),i.value=!t.disabled):i.value&&E.length>0&&(y=!0)}y&&f()},g=()=>{a.value||(a.value=new MutationObserver(_=>d(_)),a.value.observe(document.body,{childList:!0,subtree:!0,attributes:!1,characterData:!1})),o.value||(o.value=new MutationObserver(_=>{_.find(w=>w.target===r.value)&&r.value&&(n.value=Array.from(r.value.childNodes),u())}))},b=()=>{a.value&&(a.value.disconnect(),a.value=null),o.value&&(o.value.disconnect(),o.value=null)};return{teleport:r,nodes:n,waiting:i,observer:a,parent:s}},render(){return Ts("div",{ref:"teleport",class:"vue-teleport",style:this.$props.disabled?"":"visibility: hidden; display: none;"},this.$slots.default)}};typeof window<"u"&&window.Vue&&window.Vue.use(_l);/*!
-  * vue-router v3.6.5
-  * (c) 2022 Evan You
-  * @license MIT
-  */function $l(){var t=Go().proxy.$root;if(!t._$route){var e=ts(!0).run(function(){return ln(Object.assign({},t.$router.currentRoute))});t._$route=e,t.$router.afterEach(function(r){Object.assign(e,r)})}return t._$route}export{_l as T,B as V,Cl as a,wl as c,bl as d,Kt as r,$l as u,wr as w};
+ */const _l={name:"Teleport",props:{to:{type:String,required:!0},where:{type:String,default:"after"},disabled:{type:Boolean,default:!1}},setup(t,e){const r=Kt(),n=Kt([]),i=Kt(!1),a=Kt(null),o=Kt(null),s=Kt(null);wr(()=>t.to,()=>u()),wr(()=>t.where,()=>u()),wr(()=>t.disabled,_=>{_?(c(),b()):(g(),f())}),Ms(()=>{r.value&&(n.value=Array.from(r.value.childNodes)),t.disabled||g(),u()}),Ns(()=>{c(),b()});const u=()=>{t.disabled||f()},f=()=>{if(i.value=!1,s.value=document.querySelector(t.to),!s.value){c(),i.value=!0;return}t.where==="before"?s.value.prepend(v()):s.value.appendChild(v())},c=()=>{r.value?.appendChild(v()),s.value=null},v=()=>{const _=document.createDocumentFragment();return n.value.forEach(y=>_.appendChild(y)),_},d=_=>{let y=!1;for(let w=0;w<_.length;w++){const C=_[w],E=Array.from(C.addedNodes).filter(R=>!n.value.includes(R));s.value&&Array.from(C.removedNodes).includes(s.value)?(c(),i.value=!t.disabled):i.value&&E.length>0&&(y=!0)}y&&f()},g=()=>{a.value||(a.value=new MutationObserver(_=>d(_)),a.value.observe(document.body,{childList:!0,subtree:!0,attributes:!1,characterData:!1})),o.value||(o.value=new MutationObserver(_=>{_.find(w=>w.target===r.value)&&r.value&&(n.value=Array.from(r.value.childNodes),u())}))},b=()=>{a.value&&(a.value.disconnect(),a.value=null),o.value&&(o.value.disconnect(),o.value=null)};return{teleport:r,nodes:n,waiting:i,observer:a,parent:s}},render(){return Ts("div",{ref:"teleport",class:"vue-teleport",style:this.$props.disabled?"":"visibility: hidden; display: none;"},this.$slots.default)}};typeof window<"u"&&window.Vue&&window.Vue.use(_l);export{_l as T,B as V,$l as a,wl as c,bl as d,Cl as u,wr as w};
