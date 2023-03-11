@@ -67,6 +67,7 @@ h3 {
       &:before {
         display: none;
       }
+
       &:after {
         display: none;
       }
