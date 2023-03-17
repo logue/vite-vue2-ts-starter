@@ -18,6 +18,8 @@ Also, when the development server is executed, it is checked in real time by [vi
 
 [Vitest](https://github.com/vuejs/vue-test-utils) is included in the program for testing.
 
+First define `VITE_APP_TITLE` in your `.env` file.
+
 ### Composition API
 
 With the standard support for [Composition API](https://composition-api.vuejs.org/) in vue 2.7, the default format is composition api.

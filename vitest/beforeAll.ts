@@ -1,4 +1,5 @@
 import { beforeAll } from 'vitest';
+
 (global as any).CSS = { supports: () => false };
 
 beforeAll(() => {
@@ -8,6 +9,7 @@ beforeAll(() => {
     escape: (str: string) => str,
   };
   console.log(
-    '📝 [vitest] CSS.support:' + CSS.supports('selector(:focus-visible)')
+    '📝 [vitest] CSS.support:',
+    CSS.supports('selector(:focus-visible)')
   );
 });
