@@ -40,6 +40,12 @@ h3 {
   color: var(--color-heading);
 }
 
+code {
+  color: #d63384;
+  background-color: #f8f9fa;
+  word-wrap: break-word;
+}
+
 @media (min-width: 1024px) {
   .item {
     margin-top: 0;

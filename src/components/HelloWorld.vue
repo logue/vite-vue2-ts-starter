@@ -16,6 +16,13 @@
         v-text="new Date(meta.date).toLocaleString()"
       />
     </p>
+    <p v-if="!title">
+      Please define
+      <code>VITE_APP_TITLE</code>
+      variable in to
+      <code>.env</code>
+      file.
+    </p>
     <h3>
       You've successfully created a project with
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a>
@@ -48,8 +55,11 @@ export default defineComponent({
     /** Meta information */
     const meta: MetaInterface = Meta;
 
+    const title = import.meta.env.VITE_APP_TITLE;
+
     return {
       meta,
+      title,
     };
   },
 });
@@ -60,10 +70,12 @@ h1 {
   font-weight: 500;
   font-size: 2.6rem;
   top: -10px;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 .greetings {

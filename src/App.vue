@@ -69,7 +69,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -108,6 +108,12 @@ nav {
       }
     }
   }
+}
+
+code {
+  font-size: 0.875em;
+  color: #d63384;
+  word-wrap: break-word;
 }
 
 @media (min-width: 1024px) {
