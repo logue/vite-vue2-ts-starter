@@ -18,7 +18,7 @@
       />
       <meta name="description" content="Vite Vue2 TypeScript Demo" />
       <link rel="icon" :href="logo" type="image/svg+xml" />
-      <component :is="'script'" type="application/ld+json">
+      <component :is="'script'" :type="'application/ld+json'">
         {{ jsonLd }}
       </component>
     </teleport>

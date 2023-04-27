@@ -11,19 +11,9 @@ import { fileURLToPath, URL } from 'node:url';
 export default defineConfig({
   // plugins
   plugins: [
-    {
-      name: 'vitest-plugin-beforeall',
-      config: () => ({
-        test: {
-          setupFiles: [
-            fileURLToPath(new URL('./vitest/beforeAll.ts', import.meta.url)),
-          ],
-        },
-      }),
-    } as any,
     // Vue2
     // https://github.com/vitejs/vite-plugin-vue2
-    vue(),
+    vue() as any,
   ],
   // Resolver
   resolve: {
@@ -37,7 +27,6 @@ export default defineConfig({
     // https://vitest.dev/guide/#configuring-vitest
     environment: 'jsdom',
     globals: true,
-    globalSetup: [fileURLToPath(new URL('./vitest/setup.ts', import.meta.url))],
     exclude: [...configDefaults.exclude, 'e2e/*'],
     root: fileURLToPath(new URL('./', import.meta.url)),
   },

@@ -1,7 +1,6 @@
 /** Vue Router Configure */
 import {
   createRouter,
-  type Router,
   type RouteRecordRaw,
 } from '@logue/vue2-helpers/vue-router';
 
@@ -31,4 +30,4 @@ const router = createRouter({
   routes,
 });
 
-export default router as Router;
+export default router;

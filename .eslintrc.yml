@@ -1,19 +1,15 @@
 env:
   browser: true
-  es2021: true
+  es2022: true
   node: true
 extends:
+  - plugin:vue/recommended
   - standard-with-typescript
   - plugin:import/recommended
   - plugin:import/typescript
-  - plugin:vue/recommended
   - plugin:vuejs-accessibility/recommended
   - plugin:yaml/recommended
   - '@vue/eslint-config-prettier'
-overrides:
-  - files:
-      - '*.html'
-    processor: vue/.vue
 parser: vue-eslint-parser
 parserOptions:
   ecmaVersion: latest
@@ -35,14 +31,24 @@ plugins:
 rules:
   require-jsdoc: warn
   no-unused-vars: warn
-  '@typescript-eslint/ban-ts-comment': off
+  '@typescript-eslint/array-type':
+    - error
+    - default: array
+    - readonly: array
+  '@typescript-eslint/ban-ts-comment': off # Enable @ts-ignore etc.
+  '@typescript-eslint/explicit-function-return-type': off
   '@typescript-eslint/no-confusing-void-expression': off
+  '@typescript-eslint/no-dynamic-delete': off
+  '@typescript-eslint/no-extraneous-class': off
   '@typescript-eslint/no-floating-promises': off
-  '@typescript-eslint/no-invalid-void-type': off
   '@typescript-eslint/prefer-nullish-coalescing': off
   '@typescript-eslint/strict-boolean-expressions': off
-  '@typescript-eslint/triple-slash-reference': off
-  tsdoc/syntax: warn
+  '@typescript-eslint/triple-slash-reference': off # Vite env.d.ts fix
+  import/default: off
+  import/no-unresolved:
+    - error
+    - ignore:
+        - '^virtual:' # Fix for Vite
   vue/html-self-closing:
     - error
     - html:
@@ -57,7 +63,6 @@ settings:
       - .vue
   import/resolver:
     typescript: true
-    node: true
     alias:
       map:
         - ['@', './src']

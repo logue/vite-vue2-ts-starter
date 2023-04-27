@@ -25,6 +25,3 @@
 *.otf binary
 *.ttf binary
 *.woff binary
-
-# Export ignore
-/.github export-ignore

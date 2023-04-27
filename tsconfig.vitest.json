@@ -1,10 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig.json",
+  "include": ["env.d.ts", "src/**/*", "tests/unit/**/*"],
   "extends": "./tsconfig.app.json",
   "exclude": [],
   "compilerOptions": {
     "composite": true,
     "lib": [],
     "types": ["node", "jsdom"]
-  }
+  },
+  "vueCompilerOptions": { "target": 2.7 }
 }

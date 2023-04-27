@@ -1,84 +1,14 @@
-# Vite + Vue 2 + TypeScript
+# Vue 3 + Typescript + Vite Starter
 
-<p align="center">
-<img src="https://user-images.githubusercontent.com/480173/157433672-3d896453-9689-45e2-bbef-d91b29d72c4b.png" alt="logo" width="300" height="300" />
-</p>
+This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## Description
+Includes [vue-router](https://router.vuejs.org/) and [Pinia](https://pinia.vuejs.org/) [^1].
 
-⚠ Important Notice: Vue 2 will reach End of Life (EOL) on December 31st, 2023.
-For this reason, we do not recommend using this template for new projects.
-See [Vue 2 LTS, EOL & Extended Support](https://v2.vuejs.org/lts/).
-
-This template is for using Vue2 with TypeScript in Vite. Includes [vue-router](https://router.vuejs.org/) and [Vuex](https://vuex.vuejs.org/).
-
-In addition, [ESLint](https://eslint.org/), [Stylelint](https://stylelint.io/), and [Prettier](https://prettier.io/) are also included and are set to be executed automatically at runtime and commit.
-(Since these settings are set strictly, please relax yourself.)
+In addition, [ESLint](https://eslint.org/), [Stylelint](https://stylelint.io/), and [Prettier](https://prettier.io/) are also included and are set to be executed automatically at runtime and commit. (Since these settings are set strictly, please relax yourself.)
 
 Also, when the development server is executed, it is checked in real time by [vite-plugin-checker](https://github.com/fi3ework/vite-plugin-checker).
 
-[Vitest](https://github.com/vuejs/vue-test-utils) is included in the program for testing.
-
 First define `VITE_APP_TITLE` in your `.env` file.
-
-### Composition API
-
-With the standard support for [Composition API](https://composition-api.vuejs.org/) in vue 2.7, the default format is composition api.
-
-[vue-property-decorator](https://github.com/kaorun343/vue-property-decorator) has been dropped since 0.9.1. Please install manually if necessary.
-
-### Teleport
-
-Vue3 adds a mechanism called [`Teleport`](https://v3.vuejs.org/guide/teleport.html), which allows you to install vue components anywhere.
-This starter template is for vue2, but you can do the same with [@logue/vue2-helpers/vue2-teleport](https://github.com/logue/vue2-helpers).
-
-#### Teleport JSON-LD Example
-
-If you want to include [JSON-LD](https://json-ld.org/), enter as follows.
-
-```vue
-<template>
-  <div class="container">
-    ... Some Content
-    <teleport to="head">
-      <component :is="'script'" type="application/ld+json" v-text="jsonLd" />
-    </teleport>
-  </div>
-</template>
-
-<script>
-import { defineComponent, ref } from 'vue';
-
-export default defineComponent({
-  setup() {
-    const jsonLd = ref(
-      JSON.stringfy({
-        '@schema': 'https://json.schemastore.org/jsonld.json',
-        '@context': 'http://schema.org',
-        '@type': 'WebSite',
-        name: 'Vite Vue2 TypeScript Startar',
-        url: 'https://github.com/logue/vite-vue2-ts-starter',
-        description: 'Vite Vue2 TypeScript Demo Page',
-      })
-    );
-
-    return {
-      jsonLd,
-    };
-  },
-});
-</script>
-```
-
-JSON-LD is literally a `script`, so it can't be embedded directly, so it's a roundabout thing like this, but simple things like `meta` tags are reflected by simply inserting a tag.
-
-⚠ Notice: `<component :is="'script'" ... />` becomes `<component :as="'script'" ... />` in Vue3.
-
-### Vue i18n
-
-If you want to use [vue-i18n](https://kazupon.github.io/vue-i18n/), please install [intlify-unplugin-vue-i18n](https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n) and call the instance with `useI18n()`.
-
-In addition, the conventional method using `$t()` written in non composition-api can be used as it is.
 
 ## Recommended IDE Setup
 
@@ -88,53 +18,55 @@ And use [Volar Takeover Mode](https://vuejs.org/guide/typescript/overview.html#v
 
 ## Commands
 
-It is designed to be close to [create-vue](https://github.com/vuejs/create-vue) commands.
+It is designed to be close to [create-vue](https://github.com/vuejs/create-vue-templates/tree/main/typescript-router-pinia-vitest) commands.
 
-| Command       | Description                                        |
-| ------------- | -------------------------------------------------- |
-| dev           | Start devserver.                                   |
-| clean         | Clear devserver cache.                             |
-| type-check    | Check vue markup.                                  |
-| lint          | Run ESLint and prettier.                           |
-| lint:style    | Run Stylelint.                                     |
-| test          | Run vitest                                         |
-| test:unit     | Run Unit test                                      |
-| coverage      | Output Coverage Report.                            |
-| build         | Build for production.                              |
-| build:analyze | Execute Bundle Analyzer                            |
-| build:clean   | Clear production build files.                      |
-| build-only    | Build for production without checking.             |
-| preview       | Run the program generated by the production build. |
+| Command       | Description                                            |
+| ------------- | ------------------------------------------------------ |
+| dev           | Start devserver.                                       |
+| clean         | Clear devserver cache.                                 |
+| type-check    | Check vue markup.                                      |
+| lint          | Run ESLint and prettier.                               |
+| lint:style    | Run Stylelint.                                         |
+| test          | Run vitest                                             |
+| test:unit     | Run Unit test                                          |
+| coverage      | Output Coverage Report.                                |
+| build         | Build for production.                                  |
+| build:analyze | Execute Bundle Analyzer                                |
+| build:clean   | Clear production build files.                          |
+| build-only    | Build for production without checking. For Deploy use. |
+| preview       | Run the program generated by the production build.     |
 
-⚠ Notice: Be sure to use `build-only` as the build command for auto-deploying to Github Pages, Vercel, CloudFlare pages, etc.
-`build` is for checking whether the build passes locally, and an error occurs because it is executed without `Meta.ts` being created.
+## Type Support For `.vue` Imports in TS
 
-## Migrate from VueCli
+Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
 
-It also works when migrating from VueCLI.
-
-However, when importing a stylesheet with `@import`, it cannot be specified from the library directory. Must be specified from `./node_modules/`.
+[^1]: [Pinia](https://pinia.vuejs.org/) is the recommended state management library to replace [Vuex](https://vuex.vuejs.org/) in the next Vue. see <https://github.com/vuejs/rfcs/discussions/270#discussioncomment-2066856>
 
 ## Troubleshooting
 
 When adding or deleting files, an error may occur and even if the error is corrected, it may not be reflected in devserver. In that case, stop devserver and delete all the files in the `node_modules/.vite` directory. You can also run it with the `clean` command.
 
-Due to [yarn issues](https://github.com/yarnpkg/berry/issues/4448), it may not work properly if the path contains non-ASCII characters (such as 日本語 or 한국어, 中文 etc.).
+### Npm Scripts outputs `MODULE_NOT_FOUND`.
 
-From 0.7.4, the default project type is module. If you find a plugin that doesn't work, remove `"type": "module"` from package.json.
+Due to [yarn issues](https://github.com/yarnpkg/berry/issues/4448), it may not work properly if the path contains non-ASCII characters (such as 日本語 or 한국어, 中文 etc.).
 
 ## Checklist
 
 When you use this template, try follow the checklist to update your info properly
 
-- [ ] Change the author name in `LICENSE` and `package.json`
-- [ ] Change the favicon in `public` and `src/assets`
+- [ ] Change the author name in `LICENSE`
+- [ ] Change the favicon in `public`
 - [ ] Remove the `.github` folder which contains the funding info
 - [ ] Clean up the READMEs and remove routes
 
 ## See Also
 
-- [@logue/vue2-helpers](https://github.com/logue/vue2-helpers)
-- [vite-vue2-vuetify-ts-starter](https://github.com/logue/vite-vue2-vuetify-ts-starter) - UI library using Vuetify2
-- [laravel9-vite-vue2-starter](https://github.com/logue/laravel9-vite-vue2-starter) - for Laravel + Breeze.
-- [vite-vue2-ts-ssr-starter](https://github.com/logue/vite-vue2-ts-ssr-starter) - SSR (Server Side Rendering) Version.
+- for Vue3
+  - [vite-vuetify-ts-starter](https://github.com/logue/vite-vuetify-ts-starter) - With Vuetify3
+  - vite-elemental-plus-ts-starter - Comming soon.
+  - vite-bootstrap-vue-ts-starter - Comming soon.
+- for Vue2
+  - [vite-vue2-ts-starter](https://github.com/logue/vite-vue2-ts-starter) - Vite Vue2 starter.
+  - [vite-vue2-vuetify-ts-starter](https://github.com/logue/vite-vue2-vuetify-ts-starter) - UI library using Vuetify2
+  - [laravel9-vite-vue2-starter](https://github.com/logue/laravel9-vite-vue2-starter) - Vue2 for Laravel9 + Breeze.
+  - [vite-vue2-ts-ssr-starter](https://github.com/logue/vite-vue2-ts-ssr-starter) - SSR (Server Side Rendering) Version.

@@ -14,7 +14,7 @@ import pkg from './package.json';
  *
  * @see {@link https://vitejs.dev/config/}
  */
-export default defineConfig(async ({ command, mode }): Promise<UserConfig> => {
+export default defineConfig(({ command, mode }): UserConfig => {
   const config: UserConfig = {
     // https://vitejs.dev/config/shared-options.html#base
     base: './',

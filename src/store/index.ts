@@ -20,12 +20,12 @@ const state: RootState = {
 
 /** Getters */
 const getters: GetterTree<RootState, RootState> = {
-  example: s => s.exampleData,
+  example: (s: RootState) => s.exampleData,
 };
 
 /** Mutation */
 const mutations: MutationTree<RootState> = {
-  exampleMutation(s, payload) {
+  exampleMutation(s: RootState, payload: any) {
     s.exampleData = payload;
   },
 };
