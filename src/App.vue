@@ -54,7 +54,7 @@ export default defineComponent({
         '@type': 'WebSite',
         name: 'Vite Vue2 TypeScript Startar',
         url: 'https://github.com/logue/vite-vue2-ts-starter',
-        logo: logo,
+        logo,
         description: 'Vite Vue2 TypeScript Demo Page',
       },
       null,
