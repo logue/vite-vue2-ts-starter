@@ -1,7 +1,6 @@
 env:
   browser: true
   es2022: true
-  node: true
 extends:
   - plugin:vue/recommended
   - standard-with-typescript
@@ -31,29 +30,46 @@ plugins:
 rules:
   require-jsdoc: warn
   no-unused-vars: warn
-  '@typescript-eslint/array-type':
-    - error
-    - default: array
-    - readonly: array
   '@typescript-eslint/ban-ts-comment': off # Enable @ts-ignore etc.
-  '@typescript-eslint/explicit-function-return-type': off
-  '@typescript-eslint/no-confusing-void-expression': off
-  '@typescript-eslint/no-dynamic-delete': off
-  '@typescript-eslint/no-extraneous-class': off
-  '@typescript-eslint/no-floating-promises': off
-  '@typescript-eslint/prefer-nullish-coalescing': off
-  '@typescript-eslint/strict-boolean-expressions': off
-  '@typescript-eslint/triple-slash-reference': off # Vite env.d.ts fix
-  import/default: off
+  '@typescript-eslint/consistent-type-imports': # Enable import sort order, see bellow.
+    - error
+    - prefer: type-imports
+  '@typescript-eslint/explicit-function-return-type': off # Fix for pinia
+  '@typescript-eslint/no-confusing-void-expression':
+    - error
+    - ignoreArrowShorthand: true # Allow short land for pretter
+  '@typescript-eslint/strict-boolean-expressions': off # Fix for vite import.meta.env
+  '@typescript-eslint/triple-slash-reference': off # Fix for vite env.d.ts.
+  import/default: off # Fix for Vue setup style
+  import/no-default-export: off # Fix for Vue setup style
   import/no-unresolved:
     - error
     - ignore:
-        - '^virtual:' # Fix for Vite
-  vue/html-self-closing:
+        - '^virtual:' # Fix for unocss and vite.
+  import/order: # Sort Import Order. see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md#importorder-enforce-a-convention-in-module-import-order
+    - error
+    - groups:
+        ['builtin', 'external', 'parent', 'sibling', 'index', 'object', 'type']
+      pathGroups:
+        # Vue Core
+        - pattern: '{vue,vue-router,vuex,pinia,vite,vitest,vitest/**,@vitejs/**,@vue/**,@logue/vue2-helpers}'
+          group: external
+          position: before
+        # Internal Codes
+        - pattern: '{@/plugins/**,@/stores/**,@/router.ts,@/helpers/**,@/interfaces/**,@/types/**,@/components/**,@/views/**}'
+          group: internal
+          position: before
+      pathGroupsExcludedImportTypes:
+        - builtin
+      alphabetize:
+        order: asc
+      newlines-between: always
+  tsdoc/syntax: warn
+  vue/html-self-closing: # A tag with no content should be written like <br />.
     - error
     - html:
         void: always
-  vue/multi-word-component-names: warn
+  vue/multi-word-component-names: warn # Mitigate non-multiword component name errors to warnings.
 settings:
   import/parsers:
     '@typescript-eslint/parser':

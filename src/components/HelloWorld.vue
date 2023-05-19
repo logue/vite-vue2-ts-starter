@@ -37,6 +37,7 @@
 import { defineComponent, type SetupContext } from 'vue';
 
 import type MetaInterface from '@/interfaces/MetaInterface';
+
 import Meta from '@/Meta';
 
 /** HelloWorld Component */

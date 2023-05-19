@@ -1,5 +1,4 @@
 /** Vuex Store */
-import { createStore } from '@logue/vue2-helpers/vuex';
 import type {
   ActionContext,
   ActionTree,
@@ -7,6 +6,8 @@ import type {
   MutationTree,
   StoreOptions,
 } from 'vuex';
+
+import { createStore } from '@logue/vue2-helpers/vuex';
 
 // TODO: State Interface
 export interface RootState {

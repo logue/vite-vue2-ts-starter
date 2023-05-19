@@ -1,13 +1,12 @@
 /** Vue main script */
 import Vue from 'vue';
 
-import router from '@/router';
-import store from '@/store';
 import teleport from '@logue/vue2-helpers/teleport';
 
-import '@/assets/main.css';
-
 import App from '@/App.vue';
+import router from '@/router';
+import store from '@/store';
+import '@/assets/main.css';
 
 Vue.config.productionTip = false;
 Vue.component('Teleport', teleport);

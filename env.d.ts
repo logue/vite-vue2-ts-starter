@@ -1,16 +1,18 @@
 /// <reference types="vite/client" />
-import {
-  type ComputedOptions,
-  type ComponentOptionsMixin,
-  type MethodOptions,
-} from 'vue/types/v3-component-options';
+
+import type { Wrapper } from '@vue/test-utils';
 import {
   type ExtractPropTypes,
   type ExtractDefaultPropTypes,
   type DefineComponent,
 } from 'vue';
+
+import {
+  type ComputedOptions,
+  type ComponentOptionsMixin,
+  type MethodOptions,
+} from 'vue/types/v3-component-options';
 import { type EmitsOptions } from 'vue/types/v3-setup-context';
-import type { Wrapper } from '@vue/test-utils';
 
 /** Vue */
 declare module '*.vue' {

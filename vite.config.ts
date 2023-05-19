@@ -1,10 +1,11 @@
-import { fileURLToPath, URL } from 'node:url';
 import { writeFileSync } from 'node:fs';
+import { fileURLToPath, URL } from 'node:url';
 
-import { checker } from 'vite-plugin-checker';
-import { defineConfig, type UserConfig } from 'vite';
-import { visualizer } from 'rollup-plugin-visualizer';
 import vue from '@vitejs/plugin-vue2';
+import { defineConfig, type UserConfig } from 'vite';
+
+import { visualizer } from 'rollup-plugin-visualizer';
+import { checker } from 'vite-plugin-checker';
 
 // @ts-nocheck
 import pkg from './package.json';
