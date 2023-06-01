@@ -28,9 +28,8 @@
 <script lang="ts">
 import { defineComponent, type SetupContext } from 'vue';
 
-import HelloWorld from '@/components/HelloWorld.vue';
-
 import logo from '@/assets/vue.svg';
+import HelloWorld from '@/components/HelloWorld.vue';
 
 /** App Component */
 export default defineComponent({
