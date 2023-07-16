@@ -47,7 +47,7 @@ declare module '@vue/test-utils' {
     Defaults extends Record<
       string,
       any
-    > = ExtractDefaultPropTypes<PropsOrPropOptions>
+    > = ExtractDefaultPropTypes<PropsOrPropOptions>,
   >(
     component: DefineComponent<
       PropsOrPropOptions,
@@ -101,7 +101,7 @@ declare module '@vue/test-utils' {
     Defaults extends Record<
       string,
       any
-    > = ExtractDefaultPropTypes<PropsOrPropOptions>
+    > = ExtractDefaultPropTypes<PropsOrPropOptions>,
   >(
     component: DefineComponent<
       PropsOrPropOptions,

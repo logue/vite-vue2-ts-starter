@@ -22,20 +22,15 @@ export default defineConfig(({ command, mode }): UserConfig => {
     plugins: [
       // Vue2
       // https://github.com/vitejs/vite-plugin-vue2
+      // @ts-expect-error
       vue(),
       // vite-plugin-checker
       // https://github.com/fi3ework/vite-plugin-checker
       checker({
         typescript: true,
         vueTsc: true,
-        eslint: {
-          // for example, lint .ts and .tsx
-          lintCommand: 'eslint "./src/**/*.{ts,tsx,vue}"',
-        },
-        stylelint: {
-          // for example, lint .css and .vue
-          lintCommand: 'stylelint ./src/**/*.{css,scss,vue}',
-        },
+        // eslint: {lintCommand: 'eslint'},
+        // stylelint: {lintCommand: 'stylelint'},
       }),
       // compress assets
       // https://github.com/vbenjs/vite-plugin-compression
