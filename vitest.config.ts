@@ -13,7 +13,8 @@ export default defineConfig({
   plugins: [
     // Vue2
     // https://github.com/vitejs/vite-plugin-vue2
-    vue() as any,
+    // @ts-expect-error
+    vue(),
   ],
   // Resolver
   resolve: {
