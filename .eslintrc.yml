@@ -1,6 +1,6 @@
 env:
   browser: true
-  es2022: true
+  es2021: true
 extends:
   - plugin:vue/recommended
   - standard-with-typescript
