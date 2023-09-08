@@ -1,1 +1,0 @@
-import{d as _}from"./vue-4f2ff8f0.js";import{n as t}from"./index-c3cd33a3.js";const s=_({});var o=function(){var e=this;return e._self._c,e._self._setupProxy,e._m(0)},r=[function(){var n=this,e=n._self._c;return n._self._setupProxy,e("div",{staticClass:"about"},[e("h1",[n._v("This is an about page")])])}],a=t(s,o,r,!1,null,null,null,null);const u=a.exports;export{u as default};
