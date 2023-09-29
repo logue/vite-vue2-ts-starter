@@ -6,10 +6,11 @@
  * @logue/vue2-helpers
  *
  * @description A util package to use Vue 2 with Composition API easily
- * @version 2.1.12
+ * @version 2.1.13
  * @license Apache-2.0
- * @see {@link https://github.com/logue/vue2-helpers#readme} *
- * Build: 2023-08-23T07:05:05.105Z
+ * @see {@link https://github.com/logue/vue2-helpers#readme}
+ *
+ * Build: 2023-09-22T02:45:25.821Z
  */const tc=(t,e={},r)=>Ts(t,e,r),wl={name:"Teleport",props:{to:{type:String,required:!0},where:{type:String,default:"after"},disabled:{type:Boolean,default:!1}},setup(t,e){const r=Kt(),n=Kt([]),i=Kt(!1),a=Kt(null),o=Kt(null),s=Kt(null);wr(()=>t.to,()=>{u()}),wr(()=>t.where,()=>{u()}),wr(()=>t.disabled,_=>{_?(c(),b()):(g(),f())}),Ms(()=>{r.value!=null&&(n.value=Array.from(r.value.childNodes)),t.disabled||g(),u()}),Ns(()=>{c(),b()});const u=()=>{t.disabled||f()},f=()=>{if(i.value=!1,s.value=document.querySelector(t.to),s.value==null){c(),i.value=!0;return}t.where==="before"?s.value.prepend(v()):s.value.appendChild(v())},c=()=>{r.value?.appendChild(v()),s.value=null},v=()=>{const _=document.createDocumentFragment();return n.value.forEach(y=>_.appendChild(y)),_},d=_=>{let y=!1;_.forEach(w=>{const $=Array.from(w.addedNodes).filter(E=>!n.value.includes(E));s.value!=null&&Array.from(w.removedNodes).includes(s.value)?(c(),i.value=!t.disabled):i.value&&$.length>0&&(y=!0)}),y&&f()},g=()=>{a.value==null&&(a.value=new MutationObserver(_=>{d(_)}),a.value.observe(document.body,{childList:!0,subtree:!0,attributes:!1,characterData:!1})),o.value==null&&(o.value=new MutationObserver(_=>{_.find(w=>w.target===r.value)!=null&&r.value!=null&&(n.value=Array.from(r.value.childNodes),u())}))},b=()=>{a.value!=null&&(a.value.disconnect(),a.value=null),o.value!=null&&(o.value.disconnect(),o.value=null)};return{teleport:r,nodes:n,waiting:i,observer:a,parent:s}},render(){return tc("div",{ref:"teleport",class:"vue-teleport",style:this.$props.disabled?"":"visibility: hidden; display: none;"},this.$slots.default)}};/*!
   * vue-router v3.6.5
   * (c) 2022 Evan You
@@ -18,10 +19,11 @@
  * @logue/vue2-helpers
  *
  * @description A util package to use Vue 2 with Composition API easily
- * @version 2.1.12
+ * @version 2.1.13
  * @license Apache-2.0
- * @see {@link https://github.com/logue/vue2-helpers#readme} *
- * Build: 2023-08-23T07:05:05.118Z
+ * @see {@link https://github.com/logue/vue2-helpers#readme}
+ *
+ * Build: 2023-09-22T02:45:25.853Z
  */on.prototype.isReady=async function(){await new Promise((t,e)=>{this.onReady(t,e)})};function Cl(t){return Qa?.use(on),new on(t)}/*!
   * vue-router v3.6.5
   * (c) 2022 Evan You
@@ -34,8 +36,9 @@
  * @logue/vue2-helpers
  *
  * @description A util package to use Vue 2 with Composition API easily
- * @version 2.1.12
+ * @version 2.1.13
  * @license Apache-2.0
- * @see {@link https://github.com/logue/vue2-helpers#readme} *
- * Build: 2023-08-23T07:05:05.111Z
+ * @see {@link https://github.com/logue/vue2-helpers#readme}
+ *
+ * Build: 2023-09-22T02:45:25.857Z
  */function Sl(t){return Qa?.use(_l),new J(t)}export{wl as T,B as V,Sl as a,Cl as c,bl as d,$l as u,wr as w};
