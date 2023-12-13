@@ -7,7 +7,6 @@ import { defineConfig, type UserConfig } from 'vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { checker } from 'vite-plugin-checker';
 
-// @ts-nocheck
 import pkg from './package.json';
 
 /**
@@ -22,7 +21,6 @@ export default defineConfig(({ command, mode }): UserConfig => {
     plugins: [
       // Vue2
       // https://github.com/vitejs/vite-plugin-vue2
-      // @ts-expect-error
       vue(),
       // vite-plugin-checker
       // https://github.com/fi3ework/vite-plugin-checker
