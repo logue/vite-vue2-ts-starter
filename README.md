@@ -1,14 +1,14 @@
 # Vite + Vue 2 + TypeScript
 
+⚠ Important Notice: Vue 2 will reach End of Life (EOL) on December 31st, 2023.
+For this reason, we do not recommend using this template for new projects.
+See [Vue 2 LTS, EOL & Extended Support](https://v2.vuejs.org/lts/).
+
 <p align="center">
 <img src="https://user-images.githubusercontent.com/480173/157433672-3d896453-9689-45e2-bbef-d91b29d72c4b.png" alt="logo" width="300" height="300" />
 </p>
 
 ## Description
-
-⚠ Important Notice: Vue 2 will reach End of Life (EOL) on December 31st, 2023.
-For this reason, we do not recommend using this template for new projects.
-See [Vue 2 LTS, EOL & Extended Support](https://v2.vuejs.org/lts/).
 
 This template is for using Vue2 with TypeScript in Vite. Includes [vue-router](https://router.vuejs.org/) and [Vuex](https://vuex.vuejs.org/).
 

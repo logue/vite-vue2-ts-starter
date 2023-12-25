@@ -1,16 +1,22 @@
 <template>
-  <header>
-    <img :src="logo" class="logo vue" alt="Vue logo" width="125" height="125" />
-    <div class="wrapper">
-      <hello-world msg="vite-vue2-ts-starter" />
-      <nav>
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-      </nav>
-    </div>
-    <main>
-      <router-view />
-    </main>
+  <div id="app">
+    <header>
+      <img
+        :src="logo"
+        class="logo vue"
+        alt="Vue logo"
+        width="125"
+        height="125"
+      />
+      <div class="wrapper">
+        <hello-world msg="vite-vue2-ts-starter" />
+        <nav>
+          <router-link to="/">Home</router-link>
+          <router-link to="/about">About</router-link>
+        </nav>
+      </div>
+    </header>
+    <router-view />
     <teleport to="head">
       <meta
         name="keyword"
@@ -22,7 +28,7 @@
         {{ jsonLd }}
       </component>
     </teleport>
-  </header>
+  </div>
 </template>
 
 <script lang="ts">
